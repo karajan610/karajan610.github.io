@@ -67,7 +67,7 @@ const config: Config = {
         { to: "/blog", label: "Blog", position: "left" },
         { to: "/docs/books", label: "Book", position: "left" },
         {
-          href: "https://karajan610.github.io",
+          href: "https://github.com/karajan610",
           label: "GitHub",
           position: "right",
         },
