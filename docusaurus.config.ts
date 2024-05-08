@@ -3,8 +3,8 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
+  title: "준비 중...",
+  tagline: "",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -58,21 +58,16 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "My Site",
+      title: "Karajan Lab",
       logo: {
-        alt: "My Site Logo",
+        alt: "Karajan Lab Logo",
         src: "img/logo.svg",
       },
       items: [
-        {
-          type: "docSidebar",
-          sidebarId: "tutorialSidebar",
-          position: "left",
-          label: "Tutorial",
-        },
         { to: "/blog", label: "Blog", position: "left" },
+        { to: "/docs/books", label: "Book", position: "left" },
         {
-          href: "https://github.com/facebook/docusaurus",
+          href: "https://karajan610.github.io",
           label: "GitHub",
           position: "right",
         },
@@ -84,10 +79,10 @@ const config: Config = {
         {
           title: "Docs",
           items: [
-            {
-              label: "Tutorial",
-              to: "/docs/intro",
-            },
+            // {
+            //   label: "Tutorial",
+            //   to: "/docs/intro",
+            // },
           ],
         },
         {
