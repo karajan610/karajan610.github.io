@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkkarajan_610_github_io=self.webpackChunkkarajan_610_github_io||[]).push([[472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"\uccab \ube14\ub85c\uadf8 \ud3ec\uc2a4\ud2b8\ub97c \uc791\uc131\ud558\uba70...","permalink":"/blog/2024/05/09/index","unlisted":false}]}')}}]);
