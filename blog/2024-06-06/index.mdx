@@ -102,7 +102,7 @@ const Trigger = ({ children }: { children: ReactNode }) => {
   if (!context) throw new Error("Modal.Root 아래에 Trigger 넣어주세요");
 
   const { openModal } = context;
-  return <div onClick={openModal}>{children}</div>;
+  return <Button onClick={openModal}>{children}</Button>;
 };
 
 const Content = ({ children }: { children: ReactNode }) => {
@@ -114,7 +114,7 @@ const Content = ({ children }: { children: ReactNode }) => {
 
 const Close = ({ children }: { children: ReactNode }) => {
   const context = useContext(ModalContext);
-  return <div onClick={context.closeModal}>{children}</div>;
+  return <Button onClick={context.closeModal}>{children}</Button>;
 };
 
 export default { Root, Trigger, Content, Close };
