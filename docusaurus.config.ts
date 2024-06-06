@@ -3,8 +3,9 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "Karajan610",
-  tagline: "",
+  title: "Karajan610's Lab",
+  tagline:
+    "아직은 채워야 할 공간이 많은 개발자의 블로그 입니다. 앞으로 더 많은 내용이 채워질 예정입니다.",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
