@@ -43,7 +43,9 @@
 이런 부분을 고려하여 활용한다면 매우 유용하게 사용할 수 있습니다.</p>
 <p>반면, props 패턴은 해당 컴포넌트가 특정 역할이나 기능을 수행하기 위한 데이터나 함수들을 전달하는 경우에 유리합니다. 즉, 컴포넌트가 특정 데이터를 필요로 하고, 그 데이터를 기반으로 동작하는 경우 효과적입니다.</p>
 <p>결국 이러한 부분을 고려하여 프로젝트의 요구사항과 복잡성에 따라 상황에 맞게 선택하는것이 중요합니다.</p>
-<p>이 글을 통해 React 개발에서 props와 컴포지션 선택에 도움이 되어 더욱 효율적이고 유지보수에 도움이 되었으면 좋겠습니다.</p>]]></content>
+<p>이 글을 통해 React 개발에서 props와 컴포지션 선택에 도움이 되어 더욱 효율적이고 유지보수에 도움이 되었으면 좋겠습니다.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="참고">참고<a href="https://karajan610.github.io/blog/2024/06/06/index#%EC%B0%B8%EA%B3%A0" class="hash-link" aria-label="참고에 대한 직접 링크" title="참고에 대한 직접 링크">​</a></h2>
+<p><a href="https://www.radix-ui.com/" target="_blank" rel="noopener noreferrer">https://www.radix-ui.com/</a></p>]]></content>
         <category label="react" term="react"/>
         <category label="컴포지션" term="컴포지션"/>
     </entry>
