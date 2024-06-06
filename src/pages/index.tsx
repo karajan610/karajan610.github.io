@@ -2,7 +2,6 @@ import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
 
 import styles from "./index.module.css";
@@ -34,8 +33,31 @@ export default function Home(): JSX.Element {
       description="Description will go into a meta tag in <head />"
     >
       <HomepageHeader />
-      <main>
-        <HomepageFeatures />
+      <main className="container">
+        <div className={clsx("col col--12 text--center")}>
+          <div className="text--left">
+            프론트엔드 개발을 하면서 겪었던 문제와 고민을 정리하고, 그 해결
+            방법을 공유하려고 합니다. 문제를 인식하고 그 과정을 함께 공유하며
+            성장하는 것을 목표로 합니다. 개발을 해오면서 추구하는 방향은 기술
+            부채를 줄이고, 코드의 반복과 대칭성을 유지하는 것입니다. 대칭과
+            반복이 있다면 예측이 가능하고, 예측이 가능하다면 문제를 빠르게
+            해결할 수 있습니다. 또한 이러한 과정 속에서 혼자가 아닌 함께
+            성장하는 것을 추구합니다.
+            <br />
+            <br />
+            이러한 방향으로 개발을 하면서 겪었던 문제와 해결 방법을 공유하고,
+            함께 성장하는 것을 목표로 합니다. 다양한 사람들의 의견을 존중하며,
+            특히 다양성이 중요한 이유는 문제를 해결하는 데 있어서 다양한 시각이
+            필요하기 때문이라고 생각합니다. 사고가 같다면 실행이나 판단이 빠를
+            수 있지만, 다양성을 잃어버리면 문제 해결에서 변화에 취약해질 수
+            있다고 생각합니다.
+            <br />
+            <br />
+            IT 분야는 하루가 다르게 빠르게 변화하기 때문에 이러한 변화를
+            수용하는 것이 중요합니다. 이러한 저의 생각이 모두에게 도움이 되길
+            바라며, 개발자로서 성장하는 과정을 함께 나누고 싶습니다.
+          </div>
+        </div>
       </main>
     </Layout>
   );
