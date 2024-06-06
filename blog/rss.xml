@@ -9,12 +9,12 @@
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ko</language>
         <item>
-            <title><![CDATA[Props와 컴포지션 사이에서 고민해보기]]></title>
+            <title><![CDATA[리액트 Props와 컴포지션 사이에서 고민해보기]]></title>
             <link>https://karajan610.github.io/blog/2024/06/06/index</link>
             <guid>https://karajan610.github.io/blog/2024/06/06/index</guid>
             <pubDate>Thu, 06 Jun 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[요즘 React를 공식 사이트를 살펴보면서 공부하면서, 리액트 컴포넌트를 어떻게 하면 재사용에 유리할까? 유지보수에 도움이 될 수 있는 컴포넌트를 만들 수 있을까?를 고민하면서 읽고 있습니다.]]></description>
-            <content:encoded><![CDATA[<p>요즘 React를 공식 사이트를 살펴보면서 공부하면서, 리액트 컴포넌트를 어떻게 하면 재사용에 유리할까? 유지보수에 도움이 될 수 있는 컴포넌트를 만들 수 있을까?를 고민하면서 읽고 있습니다. <br></p>
+            <description><![CDATA[요즘 React 공식 사이트에서 공부하면서, 리액트 컴포넌트를 어떻게 하면 재사용에 유리할까? 유지보수에 도움이 될 수 있는 컴포넌트를 만들 수 있을까?를 고민하면서 읽고 있습니다.]]></description>
+            <content:encoded><![CDATA[<p>요즘 React 공식 사이트에서 공부하면서, 리액트 컴포넌트를 어떻게 하면 재사용에 유리할까? 유지보수에 도움이 될 수 있는 컴포넌트를 만들 수 있을까?를 고민하면서 읽고 있습니다. <br></p>
 <p>컴포넌트를 구성하는 방식은 여러 가지가 있지만, 가장 일반적인 두 가지 패턴인 Props 패턴과 컴포지션 패턴에 대해 다뤄보려고 합니다. <br></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="정의">정의<a href="https://karajan610.github.io/blog/2024/06/06/index#%EC%A0%95%EC%9D%98" class="hash-link" aria-label="정의에 대한 직접 링크" title="정의에 대한 직접 링크">​</a></h2>
 <p>둘의 사전적 정의를 한 번 정리해보겠습니다. <br></p>
