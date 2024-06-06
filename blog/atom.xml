@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://karajan610.github.io/blog</id>
-    <title>Karajan610 Blog</title>
+    <title>Karajan610's Lab Blog</title>
     <updated>2024-06-06T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://karajan610.github.io/blog"/>
-    <subtitle>Karajan610 Blog</subtitle>
+    <subtitle>Karajan610's Lab Blog</subtitle>
     <icon>https://karajan610.github.io/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Props와 컴포지션 사이에서 고민해보기]]></title>
