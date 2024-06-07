@@ -5,7 +5,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 const config: Config = {
   title: "Karajan610's Lab",
   tagline:
-    "아직은 채워야 할 공간이 많은 개발자의 블로그 입니다. 앞으로 더 많은 내용이 채워질 예정입니다.",
+    "저의 경험을 통해 많은 사람들이 도움을 받고, 그 과정에서 선한 영향력을 발휘하며 모두가 함께 성장했으면 좋겠습니다.",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
