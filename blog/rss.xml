@@ -49,8 +49,8 @@
 <p>이처럼 리액트로 사고하기는 UI를 구성하고 상태를 관리하는 데 필수적인 접근 방식입니다. 이 개념을 이해하고 적용하면 더욱 효율적이고 견고한 리액트 애플리케이션을 만들 수 있습니다.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="참고">참고<a href="https://karajan610.github.io/blog/2024/07/09/index#%EC%B0%B8%EA%B3%A0" class="hash-link" aria-label="참고에 대한 직접 링크" title="참고에 대한 직접 링크">​</a></h2>
 <ul>
-<li><a href="https://ko.legacy.reactjs.org/docs/thinking-in-react.html" target="_blank" rel="noopener noreferrer">Thinking in React</a></li>
-<li><a href="https://ko.react.dev/learn/thinking-in-react" target="_blank" rel="noopener noreferrer">리액트 공식 문서</a></li>
+<li><a href="https://ko.legacy.reactjs.org/docs/thinking-in-react.html" target="_blank" rel="noopener noreferrer">https://ko.legacy.reactjs.org/docs/thinking-in-react.html</a></li>
+<li><a href="https://ko.react.dev/learn/thinking-in-react" target="_blank" rel="noopener noreferrer">https://ko.react.dev/learn/thinking-in-react</a></li>
 </ul>]]></content:encoded>
             <category>react</category>
             <category>컴포넌트</category>
