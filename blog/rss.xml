@@ -15,7 +15,7 @@
             <pubDate>Tue, 09 Jul 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[들어가면서]]></description>
             <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="들어가면서">들어가면서<a href="https://karajan610.github.io/blog/2024/07/09/index#%EB%93%A4%EC%96%B4%EA%B0%80%EB%A9%B4%EC%84%9C" class="hash-link" aria-label="들어가면서에 대한 직접 링크" title="들어가면서에 대한 직접 링크">​</a></h2>
-<p>리액트 사고하기라는 공식 홈페이지의 내용을 바탕으로, 바닐라 자바스크립트 개발 시에도 유용한 사고방식을 소개합니다. 리액트 사고하기는 상태 관리나 컴포넌트를 다루는 방법을 익히며 영역을 확장하는 데 중요합니다. 이 글에서는 저만의 해석으로 이를 정리하고 요약해보겠습니다.</p>
+<p>리액트 사고하기라고 공식 홈페이지에 올라와 있지만, 솔직히 바닐라 자바스크립트로 개발할 때도 이러한 사고방식을 가지는 것이 좋은 방법 중 하나라고 생각합니다. 그만큼 리액트 사고하기는 리액트 공식 홈페이지에서 다루는 영역 중 가장 먼저 보고 익히면서 상태관리나 컴포넌트를 다루는 방법 등을 배우며 영역을 확장하는 것이 중요하다고 생각합니다. 이 글에서는 별도의 저만의 해석으로 정리하여 요약해보려고 하니 도움이 되었으면 합니다.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-ui를-컴포넌트로-분해하기">1. UI를 컴포넌트로 분해하기<a href="https://karajan610.github.io/blog/2024/07/09/index#1-ui%EB%A5%BC-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EB%A1%9C-%EB%B6%84%ED%95%B4%ED%95%98%EA%B8%B0" class="hash-link" aria-label="1. UI를 컴포넌트로 분해하기에 대한 직접 링크" title="1. UI를 컴포넌트로 분해하기에 대한 직접 링크">​</a></h2>
 <p>UI를 작은 컴포넌트로 나누는 것은 재사용성과 유지보수성을 높이는 데 필수적입니다. 컴포넌트는 명확한 역할을 가지며 독립적으로 존재해야 합니다. 이는 단일 책임 원칙, SRP(Single Responsibility Principle)를 지키는 것입니다.</p>
 <p>예를 들어, To-Do 리스트를 개발하는 경우 다음과 같이 컴포넌트를 분리할 수 있습니다:</p>
