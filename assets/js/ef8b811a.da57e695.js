@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkkarajan_610_github_io=globalThis.webpackChunkkarajan_610_github_io||[]).push([[8947],{6600(a){a.exports=JSON.parse('{"authors":[{"name":"Karajan","title":"Owner of This Blog","url":"https://github.com/karajan","email":"karajan610@gmail.com","key":"karajan","page":null,"count":0}]}')}}]);
