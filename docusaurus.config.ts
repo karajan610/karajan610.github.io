@@ -42,17 +42,11 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          editUrl: "https://github.com/karajan610/karajan610.github.io/tree/main/",
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          editUrl: "https://github.com/karajan610/karajan610.github.io/tree/main/",
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -84,28 +78,24 @@ const config: Config = {
       style: "dark",
       links: [
         {
-          title: "Docs",
+          title: "Content",
           items: [
-            // {
-            //   label: "Tutorial",
-            //   to: "/docs/intro",
-            // },
+            {
+              label: "Blog",
+              to: "/blog",
+            },
+            {
+              label: "Book",
+              to: "/docs/books",
+            },
           ],
         },
         {
-          title: "Community",
+          title: "Links",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
-            },
-            {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
-            },
-            {
-              label: "Twitter",
-              href: "https://twitter.com/docusaurus",
+              label: "GitHub",
+              href: "https://github.com/karajan610",
             },
           ],
         },
@@ -113,17 +103,13 @@ const config: Config = {
           title: "More",
           items: [
             {
-              label: "Blog",
-              to: "/blog",
-            },
-            {
-              label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              label: "Source",
+              href: "https://github.com/karajan610/karajan610.github.io",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `© ${new Date().getFullYear()} Karajan Lab. All rights reserved.`,
     },
     prism: {
       theme: prismThemes.github,
