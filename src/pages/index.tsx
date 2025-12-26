@@ -1,23 +1,31 @@
+import React from "react";
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import Heading from "@theme/Heading";
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 import styles from "./index.module.css";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
+
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
-        <Heading as="h1" className="hero__title">
+        <Heading as="h1" className={clsx("hero__title", styles.heroTitle)}>
           {siteConfig.title}
         </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className={clsx("hero__subtitle", styles.heroSubtitle)}>
+          {siteConfig.tagline}
+        </p>
         <div className={styles.buttons}>
-          <Link className="button button--secondary button--lg" to="/blog">
-            Blog
+          <Link
+            className={clsx("button button--secondary button--lg", styles.ctaButton)}
+            to="/blog"
+          >
+            Blog 보기
           </Link>
         </div>
       </div>
@@ -25,39 +33,46 @@ function HomepageHeader() {
   );
 }
 
-export default function Home(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
+function AboutSection() {
+  const { ref, isVisible } = useScrollAnimation<HTMLDivElement>({
+    threshold: 0.2,
+  });
+
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
-    >
-      <HomepageHeader />
-      <main className="container">
-        <div className={clsx("col col--12 text--center")}>
-          <div className="text--left">
-            프론트엔드 개발을 하면서 겪었던 문제와 고민을 정리하고, 그 해결
-            방법을 공유하려고 합니다. 문제를 인식하고 그 과정을 함께 공유하며
-            성장하는 것을 목표로 합니다. 개발을 해오면서 추구하는 방향은 기술
-            부채를 줄이고, 코드의 반복과 대칭성을 유지하는 것입니다. 대칭과
-            반복이 있다면 예측이 가능하고, 예측이 가능하다면 문제를 빠르게
-            해결할 수 있습니다. 또한 이러한 과정 속에서 혼자가 아닌 함께
-            성장하는 것을 추구합니다.
-            <br />
-            <br />
-            이러한 방향으로 개발을 하면서 겪었던 문제와 해결 방법을 공유하고,
-            함께 성장하는 것을 목표로 합니다. 다양한 사람들의 의견을 존중하며,
-            특히 다양성이 중요한 이유는 문제를 해결하는 데 있어서 다양한 시각이
-            필요하기 때문이라고 생각합니다. 사고가 같다면 실행이나 판단이 빠를
-            수 있지만, 다양성을 잃어버리면 문제 해결에서 변화에 취약해질 수
-            있다고 생각합니다.
-            <br />
-            <br />
-            이렇게 서로의 다른 시각에서 경험을 공유하고 그 과정에서 각자가 가진
-            선한 영향력을 행사하며, 좋은 제품이나 서비스를 만들어가며 함께
-            개발자로서 성장하는 과정을 나누고 싶습니다.
+    <section className={styles.aboutSection}>
+      <div className="container">
+        <div className="row">
+          <div className="col col--8 col--offset-2">
+            <div
+              ref={ref}
+              className={clsx(styles.aboutCard, {
+                [styles.visible]: isVisible,
+              })}
+            >
+              <p className={styles.aboutText} style={{ animationDelay: "0.1s" }}>
+                프론트엔드 개발하면서 겪은 경험과 생각을 정리합니다.
+              </p>
+              <p className={styles.aboutText} style={{ animationDelay: "0.2s" }}>
+                <strong>읽기 쉽고 확장 가능한 구조</strong>를 목표로,
+                기술 부채를 줄이고 예측 가능한 코드를 작성하려고 노력하고 있어요.
+              </p>
+              <p className={styles.aboutText} style={{ animationDelay: "0.3s" }}>
+                무조건 최신 기술보다는 기존 레거시와 내 코드가 잘 맞물려 동작하는 것도 중요하게 생각합니다.
+              </p>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
+  );
+}
+
+export default function Home(): React.JSX.Element {
+  return (
+    <Layout title="Home" description="프론트엔드 개발 경험과 삽질 기록">
+      <HomepageHeader />
+      <main className={styles.main}>
+        <AboutSection />
       </main>
     </Layout>
   );
