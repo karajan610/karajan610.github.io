@@ -6,7 +6,7 @@ const config: Config = {
   title: "Karajan610's Lab",
   tagline:
     "저의 경험을 통해 많은 사람들이 도움을 받고, 그 과정에서 선한 영향력을 발휘하며 모두가 함께 성장했으면 좋겠습니다.",
-  favicon: "img/favicon.ico",
+  favicon: "img/favicon.svg",
 
   // Set the production url of your site here
   url: "https://karajan610.github.io",
