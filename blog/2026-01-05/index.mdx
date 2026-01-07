@@ -1,0 +1,340 @@
+---
+title: "당신은 Tailwind CSS를 왜 사용하나요?"
+tags: [CSS, Tailwind, SCSS, BEM, 스타일링]
+---
+
+## SCSS+BEM 경험자가 Tailwind를 써본 후기
+
+몇 년간 SCSS+BEM에 익숙해진 상황에서 Tailwind CSS를 접했습니다.
+
+처음 Tailwind 봤을 때 "이게 뭐야, inline style이랑 뭐가 달라?" 생각했어요.
+
+```tsx
+// Tailwind
+<div className="flex items-center gap-2 text-blue-500">
+
+// Inline style
+<div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#3b82f6' }}>
+```
+
+둘 다 "**어떻게 보이는가**"를 말하고 있어요.
+
+`.card__title--highlighted` 같은 의미 있는 클래스명에 익숙했거든요.
+
+"**이 요소가 무엇인가**"를 말하는 방식이요.
+
+근데 실제로 써보니까 달랐습니다.
+
+빠르더라고요. 진짜로.
+
+그래서 의문이 생겼어요.
+
+**이거 괜찮은 건가?**
+
+아니면 **상황이 다른 건가?**
+
+<!--truncate-->
+
+---
+
+## 두 프로젝트 이야기
+
+**각각 맞는 선택이었어요.**
+
+### 빠른 일정 프로젝트 — Tailwind
+
+경험한 프로젝트 중 일부는 디자인 시안도 없는 상태에서 2개월 이내로 완료해야 하는 일정이 있었어요.
+
+일정을 맞추는 게 최우선이었거든요.
+
+솔직히? Tailwind 아니었으면 못 맞췄을 수도 있어요.
+
+결과물을 보면 이랬습니다.
+
+```tsx
+className="mt-[26px] text-[15px] font-[400] text-[#222225]"
+```
+
+arbitrary value 범벅이에요.
+
+`[26px]`, `[#222225]`. 디자인 토큰도 없이 그냥 숫자를 때려박았죠.
+
+하나의 클래스라면 읽어볼 만하지만, 만약 하나의 컴포넌트가 여러 태그 조합으로 중첩되어 있다면 어떨까요?
+
+**하지만 일정 안에 끝냈어요.**
+
+일정을 지키는 것이 제일 중요했으니까요.
+
+여기서 Tailwind의 빛을 봤습니다.
+
+### 장기 운영 서비스 — SCSS + BEM
+
+반대로 2년 넘게 SCSS+BEM으로 유지보수해온 서비스도 있어요.
+
+```scss
+// _button.scss
+.btn {
+  &--primary {
+    background-color: $c-primary;
+    color: $c-white;
+  }
+  &--secondary {
+    background-color: transparent;
+    color: $c-primary;
+  }
+  &--small { height: 3.4rem; font-size: $f-footnote; }
+  &--medium { height: 3.8rem; font-size: $f-contents; }
+}
+```
+
+`.btn--primary`, `.btn--small`.
+
+클래스만 봐도 뭔지 알 수 있어요.
+
+2년 넘게 여러 개발자가 유지보수해도 구조가 깨지지 않았어요.
+
+### 비교
+
+| 프로젝트 | 스타일링 | 기간 | 목적 |
+|---------|---------|------|------|
+| 빠른 일정 프로젝트 | Tailwind | 2개월 | 오픈 |
+| 장기 운영 서비스 | SCSS + BEM | 2년+ | 운영 |
+
+---
+
+## Tailwind가 좋았던 점
+
+### 1. 네이밍 고민이 사라졌다
+
+BEM 쓸 때 클래스명 짓느라 얼마나 시간 썼는지 몰라요.
+
+`card-item`? `card__item`? `cardItem`?
+
+`--active`? `--is-active`? `--selected`?
+
+Tailwind 쓰면 이 고민이 없어요.
+
+그냥 `flex items-center gap-2` 치면 끝.
+
+### 2. 팀 온보딩이 빨랐다
+
+새로운 팀원이 왔을 때.
+
+BEM이면 "우리 팀 규칙은 이래요" 설명해야 해요.
+
+Tailwind는 공식 문서 링크 주면 끝.
+
+---
+
+## 근데 불편했던 점도 있어요
+
+**디자인 시스템 없이 시작하면 arbitrary value 지옥이 됩니다.**
+
+### 1. arbitrary value가 쌓인다
+
+```tsx
+className="text-[#222225]"    // 30+ 곳
+className="bg-[#f5f5f5]"      // 20+ 곳
+className="mt-[26px]"
+className="text-[15px]"
+```
+
+나중에 색상 바꾸려면?
+
+전체 파일 검색해서 하나씩 고쳐야 해요.
+
+### 2. 현업의 컴포넌트는 단순하지 않다
+
+"의미는 컴포넌트에 위임하면 돼요."
+
+맞는 말이에요. 이상적으로는요.
+
+근데 작업하다 보면 어쩔 수 없이 계층 구조가 생깁니다.
+
+HTML 태그도 여러 개 섞어 쓰게 되고요.
+
+```tsx
+<div className="relative flex items-center justify-between p-4 rounded-lg bg-white shadow-md">
+  <div className="flex items-center gap-3">
+    <img className="w-12 h-12 rounded-full object-cover" />
+    <div className="flex flex-col">
+      <span className="text-sm font-medium text-gray-900">...</span>
+      <span className="text-xs text-gray-500">...</span>
+    </div>
+  </div>
+  <button className="px-3 py-1.5 text-sm font-medium text-white bg-blue-500 rounded-md hover:bg-blue-600">
+    ...
+  </button>
+</div>
+```
+
+이 정도면 양반이에요.
+
+클래스명이 길어지면 **읽기가 어렵습니다.**
+
+코드 리뷰할 때 힘들어요.
+
+### 3. CSS 선택자를 포기해야 한다
+
+CSS의 강력한 선택자들이에요.
+
+```css
+li + li { margin-top: 8px; }
+:nth-child(3n+1) { grid-column: 1; }
+input:focus ~ .label { transform: translateY(-20px); }
+```
+
+`+`, `~`, `:nth-child`, `:has`.
+
+Tailwind에서는요?
+
+```html
+<li class="[&+&]:border-t [&+&]:border-gray-200">
+```
+
+가독성이 끔찍하죠.
+
+우회 방법이 있긴 해요.
+
+근데 그게 Tailwind를 쓰는 이유인가요?
+
+### 4. 장기 운영하면 결국 추상화한다
+
+Vercel, GitHub 같은 장기 운영 프로젝트들 보세요.
+
+결국 `<Button variant="primary" />` 형태로 추상화해요.
+
+BEM이 하려던 걸 컴포넌트 레벨에서 다시 하는 거예요.
+
+그리고 컴포넌트 내부엔 여전히 계층 구조가 있어요.
+
+```tsx
+// Button 컴포넌트 내부
+<button className="flex items-center gap-2 px-4 py-2 ...">
+  <span className="text-sm font-medium ...">
+    {children}
+  </span>
+  {icon && <Icon className="w-4 h-4 ..." />}
+</button>
+```
+
+결국 "의미"를 어딘가에 담아야 한다고 생각합니다.
+
+클래스명이든, 컴포넌트 이름이든, prop 이름이든.
+
+---
+
+## Tailwind가 인기 있는 이유
+
+**시장 환경과 맞아떨어진 게 아닐까 합니다.**
+
+### 1. "일단 빨리" 문화
+
+| 환경 | 특징 |
+|------|------|
+| 스타트업 | 빠른 출시 > 유지보수 |
+| 에이전시 | 납품 후 끝 |
+| 빠른 검증 | 일단 만들고, 리팩토링은 나중 |
+
+저도 빠른 일정 프로젝트에서 이 혜택 봤어요.
+
+### 2. CSS 진입장벽을 낮춤
+
+- BEM 규칙 학습 불필요
+- 네이밍 고민 제거
+- CSS 잘 몰라도 클래스 조합으로 스타일링 가능
+
+주니어나 백엔드 출신 프론트엔드에게 매력적입니다.
+
+### 3. 생태계 효과
+
+Vercel + Next.js + Tailwind 세트.
+
+Tailwind 기반 생태계가 커지면서 선택지가 늘었어요.
+
+쓰는 사람이 많으니까 더 쓰게 되는 흐름이 있는 것 같아요.
+
+여기서 한 발짝 물러나서 생각해봤어요.
+
+---
+
+## 잠깐, 왜 좋은 코드를 쓰려고 하죠?
+
+**내가 아닌 다른 사람이 빠르게 의도를 파악하게 하려고요.**
+
+읽기 쉬우면 수정이 쉽습니다.
+
+수정이 쉬우면 확장이 쉽고요.
+
+시간과 자원은 한정되어 있어요.
+
+우리는 그 안에서 결과물을 만들어내야 합니다.
+
+그래서 네이밍 규칙이 생기고, 구조화된 코드를 쓰려고 노력하는 거예요.
+
+해외에서도 비슷한 논의가 있더라고요.
+
+Aleksandr Hovhannisyan은 [Why I Don't Like Tailwind CSS](https://www.aleksandrhovhannisyan.com/blog/why-i-dont-like-tailwind-css/)에서 이렇게 말했어요.
+
+> "시맨틱 네이밍을 포기하면, 팀원들이 코드를 논의하고 찾는 데 필요한 공통 언어를 잃는다."
+
+thoughtbot의 [Tailwind versus BEM](https://thoughtbot.com/blog/tailwind-versus-bem)에서도 비슷한 맥락이 나옵니다.
+
+> "코드를 작성하지 않은 팀원이 코드를 물려받을 때, 시맨틱 이름 없이는 상당한 인지적 부담이 생긴다."
+
+앞서 말한 "컴포넌트에 위임하면 된다"는 이상적인 얘기예요.
+
+현실은 중첩된 태그마다 긴 className을 해독해야 하는 상황이 생깁니다.
+
+장기적으로 보면, 쉬운 선택은 아닐 수도 있어요.
+
+---
+
+## 당신의 프로젝트에 Tailwind가 정말 맞나요?
+
+**"어떤 도구가 더 좋은가?" 질문이 틀렸습니다.**
+
+```
+BEM: "이 요소가 무엇인가" (Semantic)
+Tailwind: "이 요소가 어떻게 보이는가" (Visual)
+```
+
+둘 다 맞는 접근이에요.
+
+상황이 다를 뿐.
+
+| 상황 | 권장 |
+|------|------|
+| 빠른 개발, 프로토타입 | Tailwind |
+| 장기 운영, 디자인 시스템 | SCSS + BEM |
+| 팀 온보딩 중요 | Tailwind |
+| 코드 리뷰/커뮤니케이션 중요 | BEM |
+
+---
+
+## 나의 선택
+
+**홈그라운드는 SCSS+BEM.**
+
+**근데 Tailwind도 무기로 장착했어요.**
+
+둘 다 분명한 장점이 있더라고요.
+
+도구에 맞추지 말고, **도구를 내 방식에 맞춰.**
+
+빠른 일정? Tailwind 좋아요. 저도 씁니다.
+
+장기 운영 서비스? SCSS+BEM이 여전히 유효해요.
+
+중요한 건 "**왜 이 도구를 선택했는가**"를 설명할 수 있는 것.
+
+당신은 Tailwind CSS를 왜 사용하나요?
+
+---
+
+## 참고
+
+- [Goodbye Sass, Welcome Back Native CSS](https://ykss.netlify.app/translation/goodbye_sass_welcome_back_native_css/)
+- [Tailwind versus BEM - thoughtbot](https://thoughtbot.com/blog/tailwind-versus-bem)
+- [Why I Don't Like Tailwind CSS - Aleksandr Hovhannisyan](https://www.aleksandrhovhannisyan.com/blog/why-i-dont-like-tailwind-css/)
+- [Tailwind versus BEM - CSS-Tricks](https://css-tricks.com/tailwind-versus-bem/)
