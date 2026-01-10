@@ -24,29 +24,31 @@
 <p>빠르더라고요. 진짜로.</p>
 <p>그래서 의문이 생겼어요.</p>
 <p><strong>이거 괜찮은 건가?</strong></p>
-<p>아니면 <strong>상황이 다른 건가?</strong></p>
+<p>OOP에서 <strong>상속 vs 컴포지션</strong> 논쟁이 있는것처럼, 계층이 깊어지면 복잡해지니까 조합(Composition)을 쓰자는 흐름.</p>
+<p>이것을 CSS에도 다음과 같이 비교해볼수있을것 같습니다.</p>
+<table><thead><tr><th></th><th>OOP</th><th>CSS</th></tr></thead><tbody><tr><td>컴포지션</td><td>부품 조합</td><td>Tailwind (유틸리티 조합)</td></tr><tr><td>상속/구조</td><td>계층 + 규칙</td><td>SCSS+BEM (중첩 + 네이밍 규칙)</td></tr></tbody></table>
 <hr>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="두-프로젝트-이야기">두 프로젝트 이야기<a href="https://karajan610.github.io/blog/2026/01/05/%EB%8B%B9%EC%8B%A0%EC%9D%80-tailwind-css%EB%A5%BC-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%82%98%EC%9A%94#%EB%91%90-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%9D%B4%EC%95%BC%EA%B8%B0" class="hash-link" aria-label="두 프로젝트 이야기에 대한 직접 링크" title="두 프로젝트 이야기에 대한 직접 링크" translate="no">​</a></h2>
 <p><strong>각각 맞는 선택이었어요.</strong></p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="빠른-일정-프로젝트--tailwind">빠른 일정 프로젝트 — Tailwind<a href="https://karajan610.github.io/blog/2026/01/05/%EB%8B%B9%EC%8B%A0%EC%9D%80-tailwind-css%EB%A5%BC-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%82%98%EC%9A%94#%EB%B9%A0%EB%A5%B8-%EC%9D%BC%EC%A0%95-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8--tailwind" class="hash-link" aria-label="빠른 일정 프로젝트 — Tailwind에 대한 직접 링크" title="빠른 일정 프로젝트 — Tailwind에 대한 직접 링크" translate="no">​</a></h3>
-<p>경험한 프로젝트 중 일부는 디자인 시안도 없는 상태에서 2개월 이내로 완료해야 하는 일정이 있었어요.</p>
-<p>일정을 맞추는 게 최우선이었거든요.</p>
+<p>디자인 시안 없이 2개월 안에 끝내야 하는 프로젝트가 있었습니다.</p>
+<p>일정이 최우선.</p>
 <p>솔직히? Tailwind 아니었으면 못 맞췄을 수도 있어요.</p>
-<p>결과물을 보면 이랬습니다.</p>
+<p>결과물은 이랬습니다.</p>
 <div class="language-tsx codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-tsx codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">className </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"mt-[26px] text-[15px] font-[400] text-[#222225]"</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre></div></div>
 <p>arbitrary value 범벅이에요.</p>
-<p><code>[26px]</code>, <code>[#222225]</code>. 디자인 토큰도 없이 그냥 숫자를 때려박았죠.</p>
-<p>하나의 클래스라면 읽어볼 만하지만, 만약 하나의 컴포넌트가 여러 태그 조합으로 중첩되어 있다면요?</p>
-<p>읽기 어려워지겠죠. 나중에 보면요.</p>
-<p><strong>하지만 일정 안에 끝냈어요.</strong></p>
-<p>일정을 지키는 것이 제일 중요했으니까요.</p>
+<p><code>[26px]</code>, <code>[#222225]</code>. 디자인 토큰 없이 숫자를 때려박았죠.</p>
+<p>하나의 클래스면 괜찮지만, 여러 태그가 중첩되면?</p>
+<p>읽기 어려워요. 나중에 보면.</p>
+<p><strong>하지만 일정 안에 끝냈습니다.</strong></p>
+<p>그게 제일 중요했어요.</p>
 <p>여기서 Tailwind의 빛을 봤습니다.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="장기-운영-서비스--scss--bem">장기 운영 서비스 — SCSS + BEM<a href="https://karajan610.github.io/blog/2026/01/05/%EB%8B%B9%EC%8B%A0%EC%9D%80-tailwind-css%EB%A5%BC-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%82%98%EC%9A%94#%EC%9E%A5%EA%B8%B0-%EC%9A%B4%EC%98%81-%EC%84%9C%EB%B9%84%EC%8A%A4--scss--bem" class="hash-link" aria-label="장기 운영 서비스 — SCSS + BEM에 대한 직접 링크" title="장기 운영 서비스 — SCSS + BEM에 대한 직접 링크" translate="no">​</a></h3>
 <p>반대로 2년 넘게 SCSS+BEM으로 유지보수해온 서비스도 있어요.</p>
 <div class="language-scss codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-scss codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">// _button.scss</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">.btn {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &amp;--primary {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    background-color: $c-primary;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    color: $c-white;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &amp;--secondary {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    background-color: transparent;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    color: $c-primary;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &amp;--small {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    height: 3.4rem;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    font-size: $f-footnote;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &amp;--medium {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    height: 3.8rem;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    font-size: $f-contents;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre></div></div>
 <p><code>.btn--primary</code>, <code>.btn--small</code>.</p>
-<p>클래스만 봐도 뭔지 알 수 있어요.</p>
-<p>2년 넘게 여러 개발자가 유지보수해도 구조가 깨지지 않았어요.</p>
+<p>클래스만 봐도 뭔지 안다.</p>
+<p>2년 넘게 여러 개발자가 유지보수해도 구조가 안 깨졌다.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="비교">비교<a href="https://karajan610.github.io/blog/2026/01/05/%EB%8B%B9%EC%8B%A0%EC%9D%80-tailwind-css%EB%A5%BC-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%82%98%EC%9A%94#%EB%B9%84%EA%B5%90" class="hash-link" aria-label="비교에 대한 직접 링크" title="비교에 대한 직접 링크" translate="no">​</a></h3>
 <table><thead><tr><th>프로젝트</th><th>스타일링</th><th>기간</th><th>목적</th></tr></thead><tbody><tr><td>빠른 일정 프로젝트</td><td>Tailwind</td><td>2개월</td><td>오픈</td></tr><tr><td>장기 운영 서비스</td><td>SCSS + BEM</td><td>2년+</td><td>운영</td></tr></tbody></table>
 <hr>
@@ -59,7 +61,7 @@
 <p>그냥 <code>flex items-center gap-2</code> 치면 끝.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-팀-온보딩이-빨랐다">2. 팀 온보딩이 빨랐다<a href="https://karajan610.github.io/blog/2026/01/05/%EB%8B%B9%EC%8B%A0%EC%9D%80-tailwind-css%EB%A5%BC-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%82%98%EC%9A%94#2-%ED%8C%80-%EC%98%A8%EB%B3%B4%EB%94%A9%EC%9D%B4-%EB%B9%A8%EB%9E%90%EB%8B%A4" class="hash-link" aria-label="2. 팀 온보딩이 빨랐다에 대한 직접 링크" title="2. 팀 온보딩이 빨랐다에 대한 직접 링크" translate="no">​</a></h3>
 <p>새로운 팀원이 왔을 때.</p>
-<p>BEM이면 "우리 팀 규칙은 이래요" 설명해야 해요.</p>
+<p>BEM이면 "우리 팀 규칙은 이래요" 설명해야 한다.</p>
 <p>Tailwind는 공식 문서 링크 주면 끝.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-inline-style과는-다르다">3. inline style과는 다르다<a href="https://karajan610.github.io/blog/2026/01/05/%EB%8B%B9%EC%8B%A0%EC%9D%80-tailwind-css%EB%A5%BC-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%82%98%EC%9A%94#3-inline-style%EA%B3%BC%EB%8A%94-%EB%8B%A4%EB%A5%B4%EB%8B%A4" class="hash-link" aria-label="3. inline style과는 다르다에 대한 직접 링크" title="3. inline style과는 다르다에 대한 직접 링크" translate="no">​</a></h3>
 <p>"inline style이랑 뭐가 달라?"</p>
@@ -69,134 +71,102 @@
 <p>"Utilities differ from inline styles because they enforce constraints."
 (유틸리티는 제약을 강제하기 때문에 인라인 스타일과 다르다)</p>
 </blockquote>
-<p><code>text-sm</code>이냐 <code>text-xs</code>냐. 제한된 선택지에서 고르는 거예요.</p>
-<p><code>font-size: 13px</code> vs <code>14px</code> 같은 무한한 선택과는 다르죠.</p>
+<p><code>text-sm</code>이냐 <code>text-xs</code>냐. 제한된 선택지에서 골라요.</p>
+<p><code>font-size: 13px</code> vs <code>14px</code> 같은 무한한 선택과는 달라요.</p>
 <p>이게 일관성을 만들어요.</p>
-<p>예전에 4~5년 전 생각나는 에피소드가 있어요.</p>
-<p>주간 개발회의에서 나온 논쟁 중 하나가 "<code>text-color-red</code>와 <code>text-color-primary</code>, 이 둘의 차이가 뭐냐?"</p>
-<p>저를 포함해 아무도 대답을 못 했어요.</p>
-<p>지금 와서 생각해보면 <code>red</code>는 값이고, <code>primary</code>는 의미라는 생각을 합니다.</p>
-<p><code>primary</code>가 빨간색에서 파란색으로 바뀌어도 클래스명은 그대로죠.</p>
-<p>Tailwind의 constraints도 비슷한 맥락이에요. 제한된 선택지가 일관성을 만들어요.</p>
-<p>물론 이건 Tailwind를 옹호하는 입장이에요. 다른 생각도 있겠죠.</p>
+<p>4~5년 전 에피소드가 있어요.</p>
+<p>주간 개발회의에서 나온 논쟁. "<code>text-color-red</code>와 <code>text-color-primary</code>, 차이가 뭐냐?"</p>
+<p>아무도 대답 못 했다. 나 포함.</p>
+<p>지금 생각해보면 <code>red</code>는 값이고, <code>primary</code>는 의미다.</p>
+<p><code>primary</code>가 빨간색에서 파란색으로 바뀌어도 클래스명은 그대로.</p>
+<p>Tailwind의 constraints도 같은 맥락. 제한된 선택지가 일관성을 만들어요.</p>
+<p>물론 이건 Tailwind 옹호 입장이에요. 다른 생각도 있어요.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="편하지만-불편했던-점도-있어요">편하지만 불편했던 점도 있어요<a href="https://karajan610.github.io/blog/2026/01/05/%EB%8B%B9%EC%8B%A0%EC%9D%80-tailwind-css%EB%A5%BC-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%82%98%EC%9A%94#%ED%8E%B8%ED%95%98%EC%A7%80%EB%A7%8C-%EB%B6%88%ED%8E%B8%ED%96%88%EB%8D%98-%EC%A0%90%EB%8F%84-%EC%9E%88%EC%96%B4%EC%9A%94" class="hash-link" aria-label="편하지만 불편했던 점도 있어요에 대한 직접 링크" title="편하지만 불편했던 점도 있어요에 대한 직접 링크" translate="no">​</a></h2>
-<p><strong>디자인 시스템 없이 시작하면 arbitrary value 지옥이 됩니다.</strong></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="편하지만-불편했던-점도-있다">편하지만 불편했던 점도 있다<a href="https://karajan610.github.io/blog/2026/01/05/%EB%8B%B9%EC%8B%A0%EC%9D%80-tailwind-css%EB%A5%BC-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%82%98%EC%9A%94#%ED%8E%B8%ED%95%98%EC%A7%80%EB%A7%8C-%EB%B6%88%ED%8E%B8%ED%96%88%EB%8D%98-%EC%A0%90%EB%8F%84-%EC%9E%88%EB%8B%A4" class="hash-link" aria-label="편하지만 불편했던 점도 있다에 대한 직접 링크" title="편하지만 불편했던 점도 있다에 대한 직접 링크" translate="no">​</a></h2>
+<p><strong>디자인 시스템 없이 시작하면 arbitrary value 지옥.</strong></p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-arbitrary-value가-쌓인다">1. arbitrary value가 쌓인다<a href="https://karajan610.github.io/blog/2026/01/05/%EB%8B%B9%EC%8B%A0%EC%9D%80-tailwind-css%EB%A5%BC-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%82%98%EC%9A%94#1-arbitrary-value%EA%B0%80-%EC%8C%93%EC%9D%B8%EB%8B%A4" class="hash-link" aria-label="1. arbitrary value가 쌓인다에 대한 직접 링크" title="1. arbitrary value가 쌓인다에 대한 직접 링크" translate="no">​</a></h3>
 <div class="language-tsx codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-tsx codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">className </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"text-[#222225]"</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic">// 30+ 곳</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">className </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"bg-[#f5f5f5]"</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic">// 20+ 곳</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">className </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"mt-[26px]"</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">className </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"text-[15px]"</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre></div></div>
 <p>나중에 색상 바꾸려면?</p>
 <p>전체 파일 검색해서 하나씩 고쳐야 해요.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-�현업의-컴포넌트는-단순하지-않다">2. 현업의 컴포넌트는 단순하지 않다<a href="https://karajan610.github.io/blog/2026/01/05/%EB%8B%B9%EC%8B%A0%EC%9D%80-tailwind-css%EB%A5%BC-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%82%98%EC%9A%94#2-%ED%98%84%EC%97%85%EC%9D%98-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EB%8A%94-%EB%8B%A8%EC%88%9C%ED%95%98%EC%A7%80-%EC%95%8A%EB%8B%A4" class="hash-link" aria-label="2. 현업의 컴포넌트는 단순하지 않다에 대한 직접 링크" title="2. 현업의 컴포넌트는 단순하지 않다에 대한 직접 링크" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-현업의-컴포넌트는-단순하지-않다">2. 현업의 컴포넌트는 단순하지 않다<a href="https://karajan610.github.io/blog/2026/01/05/%EB%8B%B9%EC%8B%A0%EC%9D%80-tailwind-css%EB%A5%BC-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%82%98%EC%9A%94#2-%ED%98%84%EC%97%85%EC%9D%98-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EB%8A%94-%EB%8B%A8%EC%88%9C%ED%95%98%EC%A7%80-%EC%95%8A%EB%8B%A4" class="hash-link" aria-label="2. 현업의 컴포넌트는 단순하지 않다에 대한 직접 링크" title="2. 현업의 컴포넌트는 단순하지 않다에 대한 직접 링크" translate="no">​</a></h3>
 <p>"의미는 컴포넌트에 위임하면 돼요."</p>
-<p>맞는 말이에요. 이상적으로는요.</p>
-<p>근데 작업하다 보면 어쩔 수 없이 계층 구조가 생깁니다.</p>
-<p>HTML 태그도 여러 개 섞어 쓰게 되고요.</p>
+<p>맞는 말이에요. 이상적으로는.</p>
+<p>근데 작업하다 보면 계층 구조가 생겨요.</p>
+<p>HTML 태그도 여러 개 섞여요.</p>
 <div class="language-tsx codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-tsx codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">div</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">className</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag attr-value" style="color:#e3116c">relative flex items-center justify-between p-4 rounded-lg bg-white shadow-md</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain-text">  </span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">div</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">className</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag attr-value" style="color:#e3116c">flex items-center gap-3</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain-text">    </span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">img</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">className</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag attr-value" style="color:#e3116c">w-12 h-12 rounded-full object-cover</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag" style="color:#00009f"> </span><span class="token tag punctuation" style="color:#393A34">/&gt;</span><span class="token plain-text"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain-text">    </span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">div</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">className</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag attr-value" style="color:#e3116c">flex flex-col</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain-text">      </span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">span</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">className</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag attr-value" style="color:#e3116c">text-sm font-medium text-gray-900</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text">...</span><span class="token tag punctuation" style="color:#393A34">&lt;/</span><span class="token tag" style="color:#00009f">span</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain-text">      </span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">span</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">className</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag attr-value" style="color:#e3116c">text-xs text-gray-500</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text">...</span><span class="token tag punctuation" style="color:#393A34">&lt;/</span><span class="token tag" style="color:#00009f">span</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain-text">    </span><span class="token tag punctuation" style="color:#393A34">&lt;/</span><span class="token tag" style="color:#00009f">div</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain-text">  </span><span class="token tag punctuation" style="color:#393A34">&lt;/</span><span class="token tag" style="color:#00009f">div</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain-text">  </span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">button</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">className</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag attr-value" style="color:#e3116c">px-3 py-1.5 text-sm font-medium text-white bg-blue-500 rounded-md hover:bg-blue-600</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text">...</span><span class="token tag punctuation" style="color:#393A34">&lt;/</span><span class="token tag" style="color:#00009f">button</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain-text"></span><span class="token tag punctuation" style="color:#393A34">&lt;/</span><span class="token tag" style="color:#00009f">div</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><br></span></code></pre></div></div>
-<p>이 정도면 양반이에요.</p>
-<p>클래스명이 길어지면 <strong>읽기가 어렵습니다.</strong></p>
+<p>이 정도면 양반이다.</p>
+<p>클래스명이 길어지면 <strong>읽기가 어렵다.</strong></p>
 <p>코드 리뷰할 때 힘들어요.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-css-선택자를-포기해야-한다">3. CSS 선택자를 포기해야 한다<a href="https://karajan610.github.io/blog/2026/01/05/%EB%8B%B9%EC%8B%A0%EC%9D%80-tailwind-css%EB%A5%BC-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%82%98%EC%9A%94#3-css-%EC%84%A0%ED%83%9D%EC%9E%90%EB%A5%BC-%ED%8F%AC%EA%B8%B0%ED%95%B4%EC%95%BC-%ED%95%9C%EB%8B%A4" class="hash-link" aria-label="3. CSS 선택자를 포기해야 한다에 대한 직접 링크" title="3. CSS 선택자를 포기해야 한다에 대한 직접 링크" translate="no">​</a></h3>
-<p>CSS의 강력한 선택자들이에요.</p>
+<p>CSS의 강력한 선택자들.</p>
 <div class="language-css codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-css codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token selector" style="color:#00009f">li </span><span class="token selector combinator" style="color:#00009f">+</span><span class="token selector" style="color:#00009f"> li</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">margin-top</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">8</span><span class="token unit">px</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token selector pseudo-class" style="color:#00009f">:nth-child</span><span class="token selector punctuation" style="color:#393A34">(</span><span class="token selector n-th number" style="color:#36acaa">3n</span><span class="token selector n-th" style="color:#00009f"> </span><span class="token selector n-th operator" style="color:#393A34">+</span><span class="token selector n-th" style="color:#00009f"> </span><span class="token selector n-th number" style="color:#36acaa">1</span><span class="token selector punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">grid-column</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">1</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token selector" style="color:#00009f">input</span><span class="token selector pseudo-class" style="color:#00009f">:focus</span><span class="token selector" style="color:#00009f"> </span><span class="token selector combinator" style="color:#00009f">~</span><span class="token selector" style="color:#00009f"> </span><span class="token selector class" style="color:#00009f">.label</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">transform</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">translateY</span><span class="token punctuation" style="color:#393A34">(</span><span class="token number" style="color:#36acaa">-20</span><span class="token unit">px</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre></div></div>
 <p><code>+</code>, <code>~</code>, <code>:nth-child</code>, <code>:has</code>.</p>
-<p>Tailwind에서는요?</p>
+<p>Tailwind에서는?</p>
 <div class="language-html codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-html codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">li</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">class</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag attr-value" style="color:#e3116c">[&amp;+&amp;]:border-t [&amp;+&amp;]:border-gray-200</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token tag punctuation" style="color:#393A34">&lt;/</span><span class="token tag" style="color:#00009f">li</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><br></span></code></pre></div></div>
-<p>가독성이 끔찍하죠.</p>
+<p>가독성이 끔찍하다.</p>
 <p>우회 방법이 있긴 해요.</p>
-<p>근데 그게 Tailwind를 쓰는 이유인가요?</p>
+<p>근데 그게 Tailwind를 쓰는 이유인가?</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-장기-운영하면-결국-추상화한다">4. 장기 운영하면 결국 추상화한다<a href="https://karajan610.github.io/blog/2026/01/05/%EB%8B%B9%EC%8B%A0%EC%9D%80-tailwind-css%EB%A5%BC-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%82%98%EC%9A%94#4-%EC%9E%A5%EA%B8%B0-%EC%9A%B4%EC%98%81%ED%95%98%EB%A9%B4-%EA%B2%B0%EA%B5%AD-%EC%B6%94%EC%83%81%ED%99%94%ED%95%9C%EB%8B%A4" class="hash-link" aria-label="4. 장기 운영하면 결국 추상화한다에 대한 직접 링크" title="4. 장기 운영하면 결국 추상화한다에 대한 직접 링크" translate="no">​</a></h3>
-<p>Vercel, GitHub 같은 장기 운영 프로젝트들 보세요.</p>
+<p>Vercel, GitHub 같은 장기 운영 프로젝트들.</p>
 <p>결국 <code>&lt;Button variant="primary" /&gt;</code> 형태로 추상화해요.</p>
 <p>BEM이 하려던 걸 컴포넌트 레벨에서 다시 하는 거예요.</p>
 <p>그리고 컴포넌트 내부엔 여전히 계층 구조가 있어요.</p>
 <div class="language-tsx codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-tsx codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic">// Button 컴포넌트 내부</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">button</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">className</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag attr-value" style="color:#e3116c">flex items-center gap-2 px-4 py-2 ...</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain-text">  </span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">span</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">className</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag attr-value" style="color:#e3116c">text-sm font-medium ...</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain">children</span><span class="token punctuation" style="color:#393A34">}</span><span class="token tag punctuation" style="color:#393A34">&lt;/</span><span class="token tag" style="color:#00009f">span</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain-text">  </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain">icon </span><span class="token operator" style="color:#393A34">&amp;&amp;</span><span class="token plain"> </span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag class-name" style="color:#00009f">Icon</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">className</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag attr-value" style="color:#e3116c">w-4 h-4 ...</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag" style="color:#00009f"> </span><span class="token tag punctuation" style="color:#393A34">/&gt;</span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain-text"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain-text"></span><span class="token tag punctuation" style="color:#393A34">&lt;/</span><span class="token tag" style="color:#00009f">button</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><br></span></code></pre></div></div>
-<p>결국 "의미"를 어딘가에 담아야 한다고 생각합니다.</p>
+<p>결국 "의미"를 어딘가에 담아야 해요.</p>
 <p>클래스명이든, 컴포넌트 이름이든, prop 이름이든.</p>
 <hr>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="tailwind가-인기-있는-이유">Tailwind가 인기 있는 이유<a href="https://karajan610.github.io/blog/2026/01/05/%EB%8B%B9%EC%8B%A0%EC%9D%80-tailwind-css%EB%A5%BC-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%82%98%EC%9A%94#tailwind%EA%B0%80-%EC%9D%B8%EA%B8%B0-%EC%9E%88%EB%8A%94-%EC%9D%B4%EC%9C%A0" class="hash-link" aria-label="Tailwind가 인기 있는 이유에 대한 직접 링크" title="Tailwind가 인기 있는 이유에 대한 직접 링크" translate="no">​</a></h2>
-<p><strong>시장 환경과 맞아떨어진 게 아닐까 합니다.</strong></p>
+<p><strong>시장 환경과 맞아떨어졌다.</strong></p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-일단-빨리-문화">1. "일단 빨리" 문화<a href="https://karajan610.github.io/blog/2026/01/05/%EB%8B%B9%EC%8B%A0%EC%9D%80-tailwind-css%EB%A5%BC-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%82%98%EC%9A%94#1-%EC%9D%BC%EB%8B%A8-%EB%B9%A8%EB%A6%AC-%EB%AC%B8%ED%99%94" class="hash-link" aria-label="1. &quot;일단 빨리&quot; 문화에 대한 직접 링크" title="1. &quot;일단 빨리&quot; 문화에 대한 직접 링크" translate="no">​</a></h3>
 <table><thead><tr><th>환경</th><th>특징</th></tr></thead><tbody><tr><td>스타트업</td><td>빠른 출시 &gt; 유지보수</td></tr><tr><td>에이전시</td><td>납품 후 끝</td></tr><tr><td>빠른 검증</td><td>일단 만들고, 리팩토링은 나중</td></tr></tbody></table>
-<p>저도 빠른 일정 프로젝트에서 이 혜택 봤어요.</p>
+<p>나도 빠른 일정 프로젝트에서 이 혜택 봤어요.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-css-진입장벽을-낮춤">2. CSS 진입장벽을 낮춤<a href="https://karajan610.github.io/blog/2026/01/05/%EB%8B%B9%EC%8B%A0%EC%9D%80-tailwind-css%EB%A5%BC-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%82%98%EC%9A%94#2-css-%EC%A7%84%EC%9E%85%EC%9E%A5%EB%B2%BD%EC%9D%84-%EB%82%AE%EC%B6%A4" class="hash-link" aria-label="2. CSS 진입장벽을 낮춤에 대한 직접 링크" title="2. CSS 진입장벽을 낮춤에 대한 직접 링크" translate="no">​</a></h3>
 <ul>
 <li class="">BEM 규칙 학습 불필요</li>
 <li class="">네이밍 고민 제거</li>
 <li class="">CSS 잘 몰라도 클래스 조합으로 스타일링 가능</li>
 </ul>
-<p>주니어나 백엔드 출신 프론트엔드에게 매력적입니다.</p>
+<p>주니어나 백엔드 출신 프론트엔드에게 매력적이에요.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-생태계-효과">3. 생태계 효과<a href="https://karajan610.github.io/blog/2026/01/05/%EB%8B%B9%EC%8B%A0%EC%9D%80-tailwind-css%EB%A5%BC-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%82%98%EC%9A%94#3-%EC%83%9D%ED%83%9C%EA%B3%84-%ED%9A%A8%EA%B3%BC" class="hash-link" aria-label="3. 생태계 효과에 대한 직접 링크" title="3. 생태계 효과에 대한 직접 링크" translate="no">​</a></h3>
 <p>Vercel + Next.js + Tailwind 세트.</p>
 <p>Tailwind 기반 생태계가 커지면서 선택지가 늘었어요.</p>
-<p>쓰는 사람이 많으니까 더 쓰게 되는 흐름이 있는 것 같아요.</p>
-<p>여기서 한 발짝 물러나서 생각해봤어요.</p>
+<p>쓰는 사람이 많으니까 더 쓰게 되는 흐름.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="잠깐-왜-좋은-코드를-쓰려고-하죠">잠깐, 왜 좋은 코드를 쓰려고 하죠?<a href="https://karajan610.github.io/blog/2026/01/05/%EB%8B%B9%EC%8B%A0%EC%9D%80-tailwind-css%EB%A5%BC-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%82%98%EC%9A%94#%EC%9E%A0%EA%B9%90-%EC%99%9C-%EC%A2%8B%EC%9D%80-%EC%BD%94%EB%93%9C%EB%A5%BC-%EC%93%B0%EB%A0%A4%EA%B3%A0-%ED%95%98%EC%A3%A0" class="hash-link" aria-label="잠깐, 왜 좋은 코드를 쓰려고 하죠?에 대한 직접 링크" title="잠깐, 왜 좋은 코드를 쓰려고 하죠?에 대한 직접 링크" translate="no">​</a></h2>
-<p><strong>내가 아닌 다른 사람이 빠르게 의도를 파악하게 하려고요.</strong></p>
-<p>읽기 쉬우면 수정이 쉽습니다.</p>
-<p>수정이 쉬우면 확장이 쉽고요.</p>
-<p>시간과 자원은 한정되어 있어요.</p>
-<p>우리는 그 안에서 결과물을 만들어내야 합니다.</p>
-<p>그래서 네이밍 규칙이 생기고, 구조화된 코드를 쓰려고 노력하는 거예요.</p>
-<p>해외에서도 비슷한 논의가 있더라고요.</p>
-<p>Aleksandr Hovhannisyan은 <a href="https://www.aleksandrhovhannisyan.com/blog/why-i-dont-like-tailwind-css/" target="_blank" rel="noopener noreferrer" class="">Why I Don't Like Tailwind CSS</a>에서 이렇게 말했어요.</p>
-<blockquote>
-<p>"시맨틱 네이밍을 포기하면, 팀원들이 코드를 논의하고 찾는 데 필요한 공통 언어를 잃는다."</p>
-</blockquote>
-<p>thoughtbot의 <a href="https://thoughtbot.com/blog/tailwind-versus-bem" target="_blank" rel="noopener noreferrer" class="">Tailwind versus BEM</a>에서도 비슷한 맥락이 나옵니다.</p>
-<blockquote>
-<p>"코드를 작성하지 않은 팀원이 코드를 물려받을 때, 시맨틱 이름 없이는 상당한 인지적 부담이 생긴다."</p>
-</blockquote>
-<p>앞서 말한 "컴포넌트에 위임하면 된다"는 이상적인 얘기예요.</p>
-<p>현실은 중첩된 태그마다 긴 className을 해독해야 하는 상황이 생깁니다.</p>
-<p>장기적으로 보면, 쉬운 선택은 아닐 수도 있어요.</p>
-<hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="당신의-프로젝트에-tailwind가-정말-맞나요">당신의 프로젝트에 Tailwind가 정말 맞나요?<a href="https://karajan610.github.io/blog/2026/01/05/%EB%8B%B9%EC%8B%A0%EC%9D%80-tailwind-css%EB%A5%BC-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%82%98%EC%9A%94#%EB%8B%B9%EC%8B%A0%EC%9D%98-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%97%90-tailwind%EA%B0%80-%EC%A0%95%EB%A7%90-%EB%A7%9E%EB%82%98%EC%9A%94" class="hash-link" aria-label="당신의 프로젝트에 Tailwind가 정말 맞나요?에 대한 직접 링크" title="당신의 프로젝트에 Tailwind가 정말 맞나요?에 대한 직접 링크" translate="no">​</a></h2>
-<p><strong>"어떤 도구가 더 좋은가?" 질문이 틀렸습니다.</strong></p>
-<p>Adam Wathan이 던진 질문이 있어요.</p>
-<blockquote>
-<p>"For the project you're working on, what would be more valuable: <strong>restyleable HTML</strong>, or <strong>reusable CSS</strong>?"</p>
-</blockquote>
-<p>재사용성 관점의 질문이에요.</p>
-<p>근데 저는 그 전 단계가 더 중요하다고 생각해요.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="그래서-뭘-써야-하나">그래서 뭘 써야 하나?<a href="https://karajan610.github.io/blog/2026/01/05/%EB%8B%B9%EC%8B%A0%EC%9D%80-tailwind-css%EB%A5%BC-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%82%98%EC%9A%94#%EA%B7%B8%EB%9E%98%EC%84%9C-%EB%AD%98-%EC%8D%A8%EC%95%BC-%ED%95%98%EB%82%98" class="hash-link" aria-label="그래서 뭘 써야 하나?에 대한 직접 링크" title="그래서 뭘 써야 하나?에 대한 직접 링크" translate="no">​</a></h2>
+<p><strong>"어떤 도구가 더 좋은가?"</strong></p>
+<p>질문이 틀렸다.</p>
+<p>그 전에 물어야 할 게 있어요.</p>
 <p><strong>읽기 쉬운가?</strong></p>
+<blockquote>
+<p>"시맨틱 네이밍을 포기하면, 팀원들이 코드를 논의하고 찾는 데 필요한 공통 언어를 잃는다."
+— <a href="https://www.aleksandrhovhannisyan.com/blog/why-i-dont-like-tailwind-css/" target="_blank" rel="noopener noreferrer" class="">Aleksandr Hovhannisyan</a></p>
+</blockquote>
+<blockquote>
+<p>"코드를 작성하지 않은 팀원이 코드를 물려받을 때, 시맨틱 이름 없이는 상당한 인지적 부담이 생긴다."
+— <a href="https://thoughtbot.com/blog/tailwind-versus-bem" target="_blank" rel="noopener noreferrer" class="">thoughtbot</a></p>
+</blockquote>
 <p>읽기 어려우면 수정도, 확장도, 재사용도 기대하기 어려워요.</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">BEM: "이 요소가 무엇인가" (Semantic)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Tailwind: "이 요소가 어떻게 보이는가" (Visual)</span><br></span></code></pre></div></div>
-<p>둘 다 맞는 접근이에요.</p>
+<p>둘 다 맞는 접근.</p>
 <p>상황이 다를 뿐.</p>
-<p>근데 저도 고민했어요.</p>
-<p>"둘 다 적절히 조화하면 되지 않나?" 하는 생각도 들어요.</p>
-<p>시맨틱 컴포넌트에 유틸리티 조합하면 완벽하잖아요.</p>
-<p>근데 실제로 해보니까요.</p>
-<p>"이건 컴포넌트로 빼고, 저건 유틸리티로 하자" 이 기준이 사람마다 달랐어요.</p>
-<p>결국 규칙 만들고 합의하는 비용이 생기더라고요.</p>
-<p>OOP에서 상속 깊어지면 복잡해져서 Composition 쓰는 것처럼요.</p>
-<table><thead><tr><th></th><th>OOP</th><th>CSS</th></tr></thead><tbody><tr><td>컴포지션</td><td>부품 조합</td><td>Tailwind (유틸리티 조합)</td></tr><tr><td>상속/구조</td><td>계층 + 규칙</td><td>SCSS+BEM (중첩 + 네이밍 규칙)</td></tr></tbody></table>
-<p><strong>Tailwind = 극단적 컴포지션</strong></p>
-<div class="language-tsx codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-tsx codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">div</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">className</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag attr-value" style="color:#e3116c">flex gap-2 p-4 bg-white</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><br></span></code></pre></div></div>
-<p>각 클래스가 독립적. 관계 없음. 자유도 높음.</p>
-<p><strong>SCSS+BEM = 상속/계층 구조</strong></p>
-<div class="language-scss codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-scss codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">.card {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &amp;__header { }      // card의 자식</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &amp;__body { }        // card의 자식</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &amp;--highlighted { } // card의 변형</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre></div></div>
-<p>부모-자식 관계 명확. 규칙 강제.</p>
-<table><thead><tr><th></th><th>장점</th><th>단점</th></tr></thead><tbody><tr><td>Tailwind (컴포지션)</td><td>자유도 높음, 빠름</td><td>구조 파악 어려움</td></tr><tr><td>BEM (상속/구조)</td><td>구조 명확, 일관성</td><td>규칙 학습 필요, 네이밍 고민</td></tr></tbody></table>
-<p>어느 쪽이든 극단으로 가면 문제가 생긴다는 생각을 하게 됩니다.</p>
-<p>그래서 무엇을 선택하든 부채를 감당할 수 있는 쪽으로 선택을 하는 건 아닐까 하는 생각도 해요.</p>
-<p>의사결정할 게 줄어드니까요.</p>
+<p>"둘 다 조화하면 되지 않나?"</p>
+<p>해봤다. 안 됐다.</p>
+<p>"이건 컴포넌트로, 저건 유틸리티로" — 기준이 사람마다 달랐어요.</p>
+<p>규칙 만들고 합의하는 비용이 생겨요.</p>
+<p>그래서 극단적 선택이 나와요.</p>
+<p>풀 Tailwind면 규칙 자체가 필요 없고, 풀 BEM이면 규칙이 명확하니까.</p>
 <table><thead><tr><th>상황</th><th>권장</th></tr></thead><tbody><tr><td>빠른 개발, 프로토타입</td><td>Tailwind</td></tr><tr><td>장기 운영, 디자인 시스템</td><td>SCSS + BEM</td></tr><tr><td>팀 온보딩 중요</td><td>Tailwind</td></tr><tr><td>코드 리뷰/커뮤니케이션 중요</td><td>BEM</td></tr></tbody></table>
 <hr>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="나의-선택">나의 선택<a href="https://karajan610.github.io/blog/2026/01/05/%EB%8B%B9%EC%8B%A0%EC%9D%80-tailwind-css%EB%A5%BC-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%82%98%EC%9A%94#%EB%82%98%EC%9D%98-%EC%84%A0%ED%83%9D" class="hash-link" aria-label="나의 선택에 대한 직접 링크" title="나의 선택에 대한 직접 링크" translate="no">​</a></h2>
-<p><strong>홈그라운드는 SCSS+BEM.</strong></p>
-<p><strong>근데 Tailwind도 무기로 장착했어요.</strong></p>
-<p>둘 다 분명한 장점이 있더라고요.</p>
-<p>도구에 맞추지 말고, <strong>도구를 내 방식에 맞춰.</strong></p>
-<p>빠른 일정? Tailwind 좋아요. 저도 씁니다.</p>
-<p>장기 운영 서비스? SCSS+BEM이 여전히 유효해요.</p>
-<p>중요한 건 "<strong>왜 이 도구를 선택했는가</strong>"를 설명할 수 있는 것.</p>
-<p>한 가지 더 느낀 게 있어요.</p>
-<p>SCSS든, BEM이든, Tailwind든 결국 도구예요.</p>
-<p>원칙 따지다가 서비스나 제품을 만들지 못하면 본말전도니까요.</p>
-<p>그래서 마지막으로 이 질문을 던져봅니다.</p>
-<p>당신은 Tailwind CSS를 왜 사용하나요?</p>
+<p><strong>기본기는 SCSS+BEM. Tailwind는 단기전 무기.</strong></p>
+<p>장기 운영? 구조와 네이밍이 있는 쪽이 유리하다.</p>
+<p>빠른 출시? Tailwind로 속도 낸다. 실제로 그렇게 했다.</p>
+<p>중요한 건 "<strong>왜 이걸 선택했는가</strong>" 설명할 수 있는 것.</p>
+<p>한 가지 더.</p>
+<p>결국 도구다.</p>
+<p>원칙 따지다가 제품 못 만들면 본말전도.</p>
+<hr>
+<p><strong>당신은 Tailwind CSS를 왜 사용하나요?</strong></p>
 <hr>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="참고">참고<a href="https://karajan610.github.io/blog/2026/01/05/%EB%8B%B9%EC%8B%A0%EC%9D%80-tailwind-css%EB%A5%BC-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%82%98%EC%9A%94#%EC%B0%B8%EA%B3%A0" class="hash-link" aria-label="참고에 대한 직접 링크" title="참고에 대한 직접 링크" translate="no">​</a></h2>
 <ul>
