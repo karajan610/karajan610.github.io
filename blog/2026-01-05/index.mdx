@@ -52,14 +52,16 @@ tags: [CSS, Tailwind, SCSS, BEM, 스타일링]
 결과물을 보면 이랬습니다.
 
 ```tsx
-className="mt-[26px] text-[15px] font-[400] text-[#222225]"
+className = "mt-[26px] text-[15px] font-[400] text-[#222225]";
 ```
 
 arbitrary value 범벅이에요.
 
 `[26px]`, `[#222225]`. 디자인 토큰도 없이 그냥 숫자를 때려박았죠.
 
-하나의 클래스라면 읽어볼 만하지만, 만약 하나의 컴포넌트가 여러 태그 조합으로 중첩되어 있다면 어떨까요?
+하나의 클래스라면 읽어볼 만하지만, 만약 하나의 컴포넌트가 여러 태그 조합으로 중첩되어 있다면요?
+
+읽기 어려워지겠죠. 나중에 보면요.
 
 **하지만 일정 안에 끝냈어요.**
 
@@ -82,8 +84,14 @@ arbitrary value 범벅이에요.
     background-color: transparent;
     color: $c-primary;
   }
-  &--small { height: 3.4rem; font-size: $f-footnote; }
-  &--medium { height: 3.8rem; font-size: $f-contents; }
+  &--small {
+    height: 3.4rem;
+    font-size: $f-footnote;
+  }
+  &--medium {
+    height: 3.8rem;
+    font-size: $f-contents;
+  }
 }
 ```
 
@@ -95,10 +103,10 @@ arbitrary value 범벅이에요.
 
 ### 비교
 
-| 프로젝트 | 스타일링 | 기간 | 목적 |
-|---------|---------|------|------|
-| 빠른 일정 프로젝트 | Tailwind | 2개월 | 오픈 |
-| 장기 운영 서비스 | SCSS + BEM | 2년+ | 운영 |
+| 프로젝트           | 스타일링   | 기간  | 목적 |
+| ------------------ | ---------- | ----- | ---- |
+| 빠른 일정 프로젝트 | Tailwind   | 2개월 | 오픈 |
+| 장기 운영 서비스   | SCSS + BEM | 2년+  | 운영 |
 
 ---
 
@@ -124,19 +132,50 @@ BEM이면 "우리 팀 규칙은 이래요" 설명해야 해요.
 
 Tailwind는 공식 문서 링크 주면 끝.
 
+### 3. inline style과는 다르다
+
+"inline style이랑 뭐가 달라?"
+
+처음엔 저도 그렇게 생각했어요.
+
+Adam Wathan은 이렇게 말했어요.
+
+> "Utilities differ from inline styles because they enforce constraints."
+> (유틸리티는 제약을 강제하기 때문에 인라인 스타일과 다르다)
+
+`text-sm`이냐 `text-xs`냐. 제한된 선택지에서 고르는 거예요.
+
+`font-size: 13px` vs `14px` 같은 무한한 선택과는 다르죠.
+
+이게 일관성을 만들어요.
+
+예전에 4~5년 전 생각나는 에피소드가 있어요.
+
+주간 개발회의에서 나온 논쟁 중 하나가 "`text-color-red`와 `text-color-primary`, 이 둘의 차이가 뭐냐?"
+
+저를 포함해 아무도 대답을 못 했어요.
+
+지금 와서 생각해보면 `red`는 값이고, `primary`는 의미라는 생각을 합니다.
+
+`primary`가 빨간색에서 파란색으로 바뀌어도 클래스명은 그대로죠.
+
+Tailwind의 constraints도 비슷한 맥락이에요. 제한된 선택지가 일관성을 만들어요.
+
+물론 이건 Tailwind를 옹호하는 입장이에요. 다른 생각도 있겠죠.
+
 ---
 
-## 근데 불편했던 점도 있어요
+## 편하지만 불편했던 점도 있어요
 
 **디자인 시스템 없이 시작하면 arbitrary value 지옥이 됩니다.**
 
 ### 1. arbitrary value가 쌓인다
 
 ```tsx
-className="text-[#222225]"    // 30+ 곳
-className="bg-[#f5f5f5]"      // 20+ 곳
-className="mt-[26px]"
-className="text-[15px]"
+className = "text-[#222225]"; // 30+ 곳
+className = "bg-[#f5f5f5]"; // 20+ 곳
+className = "mt-[26px]";
+className = "text-[15px]";
 ```
 
 나중에 색상 바꾸려면?
@@ -162,9 +201,7 @@ HTML 태그도 여러 개 섞어 쓰게 되고요.
       <span className="text-xs text-gray-500">...</span>
     </div>
   </div>
-  <button className="px-3 py-1.5 text-sm font-medium text-white bg-blue-500 rounded-md hover:bg-blue-600">
-    ...
-  </button>
+  <button className="px-3 py-1.5 text-sm font-medium text-white bg-blue-500 rounded-md hover:bg-blue-600">...</button>
 </div>
 ```
 
@@ -179,9 +216,15 @@ HTML 태그도 여러 개 섞어 쓰게 되고요.
 CSS의 강력한 선택자들이에요.
 
 ```css
-li + li { margin-top: 8px; }
-:nth-child(3n+1) { grid-column: 1; }
-input:focus ~ .label { transform: translateY(-20px); }
+li + li {
+  margin-top: 8px;
+}
+:nth-child(3n + 1) {
+  grid-column: 1;
+}
+input:focus ~ .label {
+  transform: translateY(-20px);
+}
 ```
 
 `+`, `~`, `:nth-child`, `:has`.
@@ -189,7 +232,7 @@ input:focus ~ .label { transform: translateY(-20px); }
 Tailwind에서는요?
 
 ```html
-<li class="[&+&]:border-t [&+&]:border-gray-200">
+<li class="[&+&]:border-t [&+&]:border-gray-200"></li>
 ```
 
 가독성이 끔찍하죠.
@@ -211,9 +254,7 @@ BEM이 하려던 걸 컴포넌트 레벨에서 다시 하는 거예요.
 ```tsx
 // Button 컴포넌트 내부
 <button className="flex items-center gap-2 px-4 py-2 ...">
-  <span className="text-sm font-medium ...">
-    {children}
-  </span>
+  <span className="text-sm font-medium ...">{children}</span>
   {icon && <Icon className="w-4 h-4 ..." />}
 </button>
 ```
@@ -230,10 +271,10 @@ BEM이 하려던 걸 컴포넌트 레벨에서 다시 하는 거예요.
 
 ### 1. "일단 빨리" 문화
 
-| 환경 | 특징 |
-|------|------|
-| 스타트업 | 빠른 출시 > 유지보수 |
-| 에이전시 | 납품 후 끝 |
+| 환경      | 특징                         |
+| --------- | ---------------------------- |
+| 스타트업  | 빠른 출시 > 유지보수         |
+| 에이전시  | 납품 후 끝                   |
 | 빠른 검증 | 일단 만들고, 리팩토링은 나중 |
 
 저도 빠른 일정 프로젝트에서 이 혜택 봤어요.
@@ -294,6 +335,18 @@ thoughtbot의 [Tailwind versus BEM](https://thoughtbot.com/blog/tailwind-versus-
 
 **"어떤 도구가 더 좋은가?" 질문이 틀렸습니다.**
 
+Adam Wathan이 던진 질문이 있어요.
+
+> "For the project you're working on, what would be more valuable: **restyleable HTML**, or **reusable CSS**?"
+
+재사용성 관점의 질문이에요.
+
+근데 저는 그 전 단계가 더 중요하다고 생각해요.
+
+**읽기 쉬운가?**
+
+읽기 어려우면 수정도, 확장도, 재사용도 기대하기 어려워요.
+
 ```
 BEM: "이 요소가 무엇인가" (Semantic)
 Tailwind: "이 요소가 어떻게 보이는가" (Visual)
@@ -303,12 +356,32 @@ Tailwind: "이 요소가 어떻게 보이는가" (Visual)
 
 상황이 다를 뿐.
 
-| 상황 | 권장 |
-|------|------|
-| 빠른 개발, 프로토타입 | Tailwind |
-| 장기 운영, 디자인 시스템 | SCSS + BEM |
-| 팀 온보딩 중요 | Tailwind |
-| 코드 리뷰/커뮤니케이션 중요 | BEM |
+근데 저도 고민했어요.
+
+"둘 다 적절히 조화하면 되지 않나?" 하는 생각도 들어요.
+
+시맨틱 컴포넌트에 유틸리티 조합하면 완벽하잖아요.
+
+근데 실제로 해보니까요.
+
+"이건 컴포넌트로 빼고, 저건 유틸리티로 하자" 이 기준이 사람마다 달랐어요.
+
+결국 규칙 만들고 합의하는 비용이 생기더라고요.
+
+OOP에서 상속 깊어지면 복잡해져서 Composition 쓰는 것처럼요.
+
+어느 쪽이든 극단으로 가면 문제가 생긴다는 생각을 하게 됩니다.
+
+그래서 무엇을 선택하든 부채를 감당할 수 있는 쪽으로 선택을 하는 건 아닐까 하는 생각도 해요.
+
+의사결정할 게 줄어드니까요.
+
+| 상황                        | 권장       |
+| --------------------------- | ---------- |
+| 빠른 개발, 프로토타입       | Tailwind   |
+| 장기 운영, 디자인 시스템    | SCSS + BEM |
+| 팀 온보딩 중요              | Tailwind   |
+| 코드 리뷰/커뮤니케이션 중요 | BEM        |
 
 ---
 
@@ -328,12 +401,21 @@ Tailwind: "이 요소가 어떻게 보이는가" (Visual)
 
 중요한 건 "**왜 이 도구를 선택했는가**"를 설명할 수 있는 것.
 
+한 가지 더 느낀 게 있어요.
+
+SCSS든, BEM이든, Tailwind든 결국 도구예요.
+
+원칙 따지다가 서비스나 제품을 만들지 못하면 본말전도니까요.
+
+그래서 마지막으로 이 질문을 던져봅니다.
+
 당신은 Tailwind CSS를 왜 사용하나요?
 
 ---
 
 ## 참고
 
+- [CSS Utility Classes and "Separation of Concerns" - Adam Wathan](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/)
 - [Goodbye Sass, Welcome Back Native CSS](https://ykss.netlify.app/translation/goodbye_sass_welcome_back_native_css/)
 - [Tailwind versus BEM - thoughtbot](https://thoughtbot.com/blog/tailwind-versus-bem)
 - [Why I Don't Like Tailwind CSS - Aleksandr Hovhannisyan](https://www.aleksandrhovhannisyan.com/blog/why-i-dont-like-tailwind-css/)
