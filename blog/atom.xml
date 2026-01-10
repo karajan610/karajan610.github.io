@@ -171,6 +171,14 @@
 <p>"이건 컴포넌트로 빼고, 저건 유틸리티로 하자" 이 기준이 사람마다 달랐어요.</p>
 <p>결국 규칙 만들고 합의하는 비용이 생기더라고요.</p>
 <p>OOP에서 상속 깊어지면 복잡해져서 Composition 쓰는 것처럼요.</p>
+<table><thead><tr><th></th><th>OOP</th><th>CSS</th></tr></thead><tbody><tr><td>컴포지션</td><td>부품 조합</td><td>Tailwind (유틸리티 조합)</td></tr><tr><td>상속/구조</td><td>계층 + 규칙</td><td>SCSS+BEM (중첩 + 네이밍 규칙)</td></tr></tbody></table>
+<p><strong>Tailwind = 극단적 컴포지션</strong></p>
+<div class="language-tsx codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-tsx codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">div</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">className</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag attr-value" style="color:#e3116c">flex gap-2 p-4 bg-white</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><br></span></code></pre></div></div>
+<p>각 클래스가 독립적. 관계 없음. 자유도 높음.</p>
+<p><strong>SCSS+BEM = 상속/계층 구조</strong></p>
+<div class="language-scss codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-scss codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">.card {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &amp;__header { }      // card의 자식</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &amp;__body { }        // card의 자식</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &amp;--highlighted { } // card의 변형</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>부모-자식 관계 명확. 규칙 강제.</p>
+<table><thead><tr><th></th><th>장점</th><th>단점</th></tr></thead><tbody><tr><td>Tailwind (컴포지션)</td><td>자유도 높음, 빠름</td><td>구조 파악 어려움</td></tr><tr><td>BEM (상속/구조)</td><td>구조 명확, 일관성</td><td>규칙 학습 필요, 네이밍 고민</td></tr></tbody></table>
 <p>어느 쪽이든 극단으로 가면 문제가 생긴다는 생각을 하게 됩니다.</p>
 <p>그래서 무엇을 선택하든 부채를 감당할 수 있는 쪽으로 선택을 하는 건 아닐까 하는 생각도 해요.</p>
 <p>의사결정할 게 줄어드니까요.</p>
