@@ -23,16 +23,12 @@
 <hr>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="첫-번째-mrpr">첫 번째 MR(PR)<a href="https://karajan610.github.io/blog/2026/04/03/%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0%EA%B0%80-%EC%97%86%EB%8D%98-%ED%8C%80%EC%97%90%EC%84%9C-9%EA%B0%9C%EC%9B%94#%EC%B2%AB-%EB%B2%88%EC%A7%B8-mrpr" class="hash-link" aria-label="첫 번째 MR(PR)에 대한 직접 링크" title="첫 번째 MR(PR)에 대한 직접 링크" translate="no">​</a></h2>
 <p>feature 브랜치를 만들고, 이슈와 해결 방향을 설명에 적고, 동료를 리뷰어로 지정했어요.</p>
-<p>자신이 작성한 코드에 대해 설명과 이유를 남기는 것. 그게 MR에 포함되어야 했고, 팀 안에서 그런 흐름을 만들고자 하였습니다.</p>
+<p>자신이 작성한 코드에 대해 설명과 이유를 남기는 것. 그게 MR에 포함되어야 했고, 팀 안에서 그런 흐름을 만들고 싶었어요.</p>
 <p>내 코드를 동료가 읽을 수 있어야 하고, 동료의 코드를 내가 읽을 수 있어야 한다. MR은 그 시작점이었어요.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="9개월의-숫자">9개월의 숫자<a href="https://karajan610.github.io/blog/2026/04/03/%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0%EA%B0%80-%EC%97%86%EB%8D%98-%ED%8C%80%EC%97%90%EC%84%9C-9%EA%B0%9C%EC%9B%94#9%EA%B0%9C%EC%9B%94%EC%9D%98-%EC%88%AB%EC%9E%90" class="hash-link" aria-label="9개월의 숫자에 대한 직접 링크" title="9개월의 숫자에 대한 직접 링크" translate="no">​</a></h2>
-<table><thead><tr><th>항목</th><th>수치</th></tr></thead><tbody><tr><td>작성한 MR</td><td>204건 (월 평균 22건)</td></tr><tr><td>동료 MR 리뷰</td><td>25건 이상</td></tr><tr><td>리뷰 방식</td><td>MR 코멘트 + 데일리 스크럼 오프라인 리뷰</td></tr></tbody></table>
-<p>월 평균 22건의 MR을 올리면서, 동료 코드를 읽고 피드백을 남겼습니다.</p>
-<p>처음 6개월은 리뷰를 말로 요청하지 않았어요. 실천이 먼저였습니다.</p>
-<hr>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="일단-먼저-해보기">일단, 먼저 해보기<a href="https://karajan610.github.io/blog/2026/04/03/%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0%EA%B0%80-%EC%97%86%EB%8D%98-%ED%8C%80%EC%97%90%EC%84%9C-9%EA%B0%9C%EC%9B%94#%EC%9D%BC%EB%8B%A8-%EB%A8%BC%EC%A0%80-%ED%95%B4%EB%B3%B4%EA%B8%B0" class="hash-link" aria-label="일단, 먼저 해보기에 대한 직접 링크" title="일단, 먼저 해보기에 대한 직접 링크" translate="no">​</a></h2>
-<p>204건의 MR을 직접 작성하면서 리뷰도 함께 했어요.</p>
+<table><thead><tr><th>항목</th><th>수치</th></tr></thead><tbody><tr><td>작성한 MR</td><td>204건 (월 평균 22건)</td></tr><tr><td>동료 MR 리뷰</td><td>25건 이상</td></tr><tr><td>리뷰 방식</td><td>MR 코멘트 + 데일리 스크럼 오프라인 리뷰</td></tr></tbody></table>
+<p>처음 6개월은 리뷰를 말로 요청하지 않았어요. 실천이 먼저였습니다.</p>
 <p>MR을 제대로 올리는 것 자체가 시작이었습니다. feature 브랜치를 나누고, 설명에 이유를 적고, 리뷰어를 지정하는 것. 그 흐름을 먼저 만들었어요.</p>
 <p>동료의 코드를 읽을 때는, 톤을 의식했습니다.</p>
 <p>직접 코드를 쓰는 사람이 리뷰하면 "이렇게 하세요"가 아니라 **"저도 이렇게 하고 있는데, 이 방향은 어떨까요"**가 돼요.</p>
@@ -46,7 +42,7 @@
 <p>"이 코드를 3개월 뒤에 다른 사람이 읽었을 때, 이해할 수 있는가?"</p>
 </blockquote>
 <p>상황이나 회사마다, 그리고 팀 역량마다 다르겠지만 저는 지금의 자리에서는 다음과 같은 내용을 기본으로 삼아 리뷰의 출발점으로 삼고 있습니다.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="설계--코드-너머를-보려고-한다">설계 — 코드 너머를 보려고 한다<a href="https://karajan610.github.io/blog/2026/04/03/%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0%EA%B0%80-%EC%97%86%EB%8D%98-%ED%8C%80%EC%97%90%EC%84%9C-9%EA%B0%9C%EC%9B%94#%EC%84%A4%EA%B3%84--%EC%BD%94%EB%93%9C-%EB%84%88%EB%A8%B8%EB%A5%BC-%EB%B3%B4%EB%A0%A4%EA%B3%A0-%ED%95%9C%EB%8B%A4" class="hash-link" aria-label="설계 — 코드 너머를 보려고 한다에 대한 직접 링크" title="설계 — 코드 너머를 보려고 한다에 대한 직접 링크" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="설계--코드-너머를-보려고-한다">설계 — 코드 너머를 보려고 한다<a href="https://karajan610.github.io/blog/2026/04/03/%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0%EA%B0%80-%EC%97%86%EB%8D%98-%ED%8C%80%EC%97%90%EC%84%9C-9%EA%B0%9C%EC%9B%94#%EC%84%A4%EA%B3%84--%EC%BD%94%EB%93%9C-%EB%84%88%EB%A8%B8%EB%A5%BC-%EB%B3%B4%EB%A0%A4%EA%B3%A0-%ED%95%9C%EB%8B%A4" class="hash-link" aria-label="설계 — 코드 너머를 보려고 한다에 대한 직접 링크" title="설계 — 코드 �너머를 보려고 한다에 대한 직접 링크" translate="no">​</a></h3>
 <p>동작 여부보다 <strong>놓치기 쉬운 부분</strong>을 함께 확인하려고 해요.</p>
 <ul>
 <li class="">등록만 되어있고 실제로 사용되지 않는 코드가 남아있지 않은지</li>
@@ -123,6 +119,7 @@
 <p>리뷰 문화는 한 사람이 만드는 게 아니라고 생각합니다. 누군가가 먼저 시작하고, 그걸 본 사람이 자기 방식으로 발전시킬 때 문화가 되는 거라고 생각해요.</p>
 <hr>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="리뷰-범위를-넓히다">리뷰 범위를 넓히다<a href="https://karajan610.github.io/blog/2026/04/03/%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0%EA%B0%80-%EC%97%86%EB%8D%98-%ED%8C%80%EC%97%90%EC%84%9C-9%EA%B0%9C%EC%9B%94#%EB%A6%AC%EB%B7%B0-%EB%B2%94%EC%9C%84%EB%A5%BC-%EB%84%93%ED%9E%88%EB%8B%A4" class="hash-link" aria-label="리뷰 범위를 넓히다에 대한 직접 링크" title="리뷰 범위를 넓히다에 대한 직접 링크" translate="no">​</a></h2>
+<p>처음에는 하나의 프로젝트에서 시작했어요. 점차 다른 프론트엔드 프로젝트로 리뷰 범위를 넓혀갔습니다.</p>
 <p>6개월이 지나서야 명시적으로 이야기했어요.</p>
 <blockquote>
 <p>"FE MR이 올라왔을 때 가능하면 코멘트나 질문을 남겨주시면 좋겠습니다. 본인 코드뿐 아니라 동료의 코드를 읽고 피드백하는 것도 중요한 개발자의 역할이라 생각합니다."</p>
@@ -143,7 +140,7 @@
 </ul>
 <hr>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="돌아보며">돌아보며<a href="https://karajan610.github.io/blog/2026/04/03/%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0%EA%B0%80-%EC%97%86%EB%8D%98-%ED%8C%80%EC%97%90%EC%84%9C-9%EA%B0%9C%EC%9B%94#%EB%8F%8C%EC%95%84%EB%B3%B4%EB%A9%B0" class="hash-link" aria-label="돌아보며에 대한 직접 링크" title="돌아보며에 대한 직접 링크" translate="no">​</a></h2>
-<p>코드 리뷰용 MR이 없던 팀에서, 9개월 동안 204건의 MR을 올리고 25건 이상의 동료 코드를 함께 읽었어요.</p>
+<p>코드 리뷰 프로세스가 없던 팀에서, 9개월 동안 204건의 MR을 올리고 25건 이상의 동료 코드를 함께 읽었어요.</p>
 <p>3개월 뒤, 동료의 MR이 달라지기 시작했습니다. 6개월 뒤, 동료가 직접 리뷰 경험을 정리해 발표했어요.</p>
 <p>아직 양방향은 아닙니다. 아직 더 넓혀야 해요. 아직 더 나아가야 합니다.</p>
 <p>하지만 리뷰 한 건이 쌓이면 문화가 된다는 걸, 조금씩 확인하고 있어요.</p>]]></content:encoded>
