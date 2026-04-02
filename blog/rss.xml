@@ -4,10 +4,154 @@
         <title>Karajan610's Lab Blog</title>
         <link>https://karajan610.github.io/blog</link>
         <description>Karajan610's Lab Blog</description>
-        <lastBuildDate>Mon, 05 Jan 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 03 Apr 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ko</language>
+        <item>
+            <title><![CDATA[코드 리뷰가 없던 팀에서 9개월]]></title>
+            <link>https://karajan610.github.io/blog/2026/04/03/코드-리뷰가-없던-팀에서-9개월</link>
+            <guid>https://karajan610.github.io/blog/2026/04/03/코드-리뷰가-없던-팀에서-9개월</guid>
+            <pubDate>Fri, 03 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[서로의 코드를 읽기 전]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="서로의-코드를-읽기-전">서로의 코드를 읽기 전<a href="https://karajan610.github.io/blog/2026/04/03/%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0%EA%B0%80-%EC%97%86%EB%8D%98-%ED%8C%80%EC%97%90%EC%84%9C-9%EA%B0%9C%EC%9B%94#%EC%84%9C%EB%A1%9C%EC%9D%98-%EC%BD%94%EB%93%9C%EB%A5%BC-%EC%9D%BD%EA%B8%B0-%EC%A0%84" class="hash-link" aria-label="서로의 코드를 읽기 전에 대한 직접 링크" title="서로의 코드를 읽기 전에 대한 직접 링크" translate="no">​</a></h2>
+<p>입사했을 때, 팀에는 코드 리뷰 프로세스가 없었어요.</p>
+<p>MR은 있었습니다. 배포할 때 dev → master로 머지하기 위한 용도로. 하지만 서로의 코드를 읽고 피드백하는 과정은 아직 자리잡기 전이었어요.</p>
+<p>작은 팀이 빠르게 움직이기 위한 선택이었을 거예요. 하지만 코드가 쌓이고 사람이 늘어나면, 서로의 코드를 읽는 구조가 필요해진다고 생각했습니다.</p>
+<p>저는 MR(PR)을 올리는 과정 자체가 중요하다고 생각해요. 에디터에서 보는 코드와 MR로 올려서 보는 코드는 다르게 보이거든요. 다른 사람이 내 코드를 읽을 거라는 전제가 생기면, 올리기 전에 스스로 한 번 더 검토하게 됩니다. 변경 이유를 설명에 적는 과정에서 자신의 판단을 다시 정리하게 되고요.</p>
+<p>이 프로세스가 팀에 문화로 자리잡으면 좋겠다는 생각이 있었어요. 그래서 시작했습니다.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="첫-번째-mrpr">첫 번째 MR(PR)<a href="https://karajan610.github.io/blog/2026/04/03/%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0%EA%B0%80-%EC%97%86%EB%8D%98-%ED%8C%80%EC%97%90%EC%84%9C-9%EA%B0%9C%EC%9B%94#%EC%B2%AB-%EB%B2%88%EC%A7%B8-mrpr" class="hash-link" aria-label="첫 번째 MR(PR)에 대한 직접 링크" title="첫 번째 MR(PR)에 대한 직접 링크" translate="no">​</a></h2>
+<p>feature 브랜치를 만들고, 이슈와 해결 방향을 설명에 적고, 동료를 리뷰어로 지정했어요.</p>
+<p>자신이 작성한 코드에 대해 설명과 이유를 남기는 것. 그게 MR에 포함되어야 했고, 팀 안에서 그런 흐름을 만들고자 하였습니다.</p>
+<p>내 코드를 동료가 읽을 수 있어야 하고, 동료의 코드를 내가 읽을 수 있어야 한다. MR은 그 시작점이었어요.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="9개월의-숫자">9개월의 숫자<a href="https://karajan610.github.io/blog/2026/04/03/%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0%EA%B0%80-%EC%97%86%EB%8D%98-%ED%8C%80%EC%97%90%EC%84%9C-9%EA%B0%9C%EC%9B%94#9%EA%B0%9C%EC%9B%94%EC%9D%98-%EC%88%AB%EC%9E%90" class="hash-link" aria-label="9개월의 숫자에 대한 직접 링크" title="9개월의 숫자에 대한 직접 링크" translate="no">​</a></h2>
+<table><thead><tr><th>항목</th><th>수치</th></tr></thead><tbody><tr><td>작성한 MR</td><td>204건 (월 평균 22건)</td></tr><tr><td>동료 MR 리뷰</td><td>25건 이상</td></tr><tr><td>리뷰 방식</td><td>MR 코멘트 + 데일리 스크럼 오프라인 리뷰</td></tr></tbody></table>
+<p>월 평균 22건의 MR을 올리면서, 동료 코드를 읽고 피드백을 남겼습니다.</p>
+<p>처음 6개월은 리뷰를 말로 요청하지 않았어요. 실천이 먼저였습니다.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="일단-먼저-해보기">일단, 먼저 해보기<a href="https://karajan610.github.io/blog/2026/04/03/%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0%EA%B0%80-%EC%97%86%EB%8D%98-%ED%8C%80%EC%97%90%EC%84%9C-9%EA%B0%9C%EC%9B%94#%EC%9D%BC%EB%8B%A8-%EB%A8%BC%EC%A0%80-%ED%95%B4%EB%B3%B4%EA%B8%B0" class="hash-link" aria-label="일단, 먼저 해보기에 대한 직접 링크" title="일단, 먼저 해보기에 대한 직접 링크" translate="no">​</a></h2>
+<p>204건의 MR을 직접 작성하면서 리뷰도 함께 했어요.</p>
+<p>MR을 제대로 올리는 것 자체가 시작이었습니다. feature 브랜치를 나누고, 설명에 이유를 적고, 리뷰어를 지정하는 것. 그 흐름을 먼저 만들었어요.</p>
+<p>동료의 코드를 읽을 때는, 톤을 의식했습니다.</p>
+<p>직접 코드를 쓰는 사람이 리뷰하면 "이렇게 하세요"가 아니라 **"저도 이렇게 하고 있는데, 이 방향은 어떨까요"**가 돼요.</p>
+<p>3개월, 6개월 뒤 누군가가 이 코드를 읽고 수정하고 확장할 수 있는가. 그리고 서로 질문하고 답하면서 놓친 부분을 보완하는 과정. 리뷰는 코드와 사람, 양쪽의 기준을 함께 맞춰가는 과정이라고 생각합니다.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="리뷰하면서-신경-쓰는-것들">리뷰하면서 신경 쓰는 것들<a href="https://karajan610.github.io/blog/2026/04/03/%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0%EA%B0%80-%EC%97%86%EB%8D%98-%ED%8C%80%EC%97%90%EC%84%9C-9%EA%B0%9C%EC%9B%94#%EB%A6%AC%EB%B7%B0%ED%95%98%EB%A9%B4%EC%84%9C-%EC%8B%A0%EA%B2%BD-%EC%93%B0%EB%8A%94-%EA%B2%83%EB%93%A4" class="hash-link" aria-label="리뷰하면서 신경 쓰는 것들에 대한 직접 링크" title="리뷰하면서 신경 쓰는 것들에 대한 직접 링크" translate="no">​</a></h2>
+<p>리뷰할 때 의식적으로 보려고 하는 부분이 있어요.</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">가독성 &gt; 유연성 &gt; 성능</span><br></span></code></pre></div></div>
+<p>성능이 좋아도 읽기 어려운 코드는 유지보수하기 어렵고, 유연하게 설계해도 동료가 이해할 수 없으면 확장하기 어렵다고 생각해요.</p>
+<blockquote>
+<p>"이 코드를 3개월 뒤에 다른 사람이 읽었을 때, 이해할 수 있는가?"</p>
+</blockquote>
+<p>상황이나 회사마다, 그리고 팀 역량마다 다르겠지만 저는 지금의 자리에서는 다음과 같은 내용을 기본으로 삼아 리뷰의 출발점으로 삼고 있습니다.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="설계--코드-너머를-보려고-한다">설계 — 코드 너머를 보려고 한다<a href="https://karajan610.github.io/blog/2026/04/03/%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0%EA%B0%80-%EC%97%86%EB%8D%98-%ED%8C%80%EC%97%90%EC%84%9C-9%EA%B0%9C%EC%9B%94#%EC%84%A4%EA%B3%84--%EC%BD%94%EB%93%9C-%EB%84%88%EB%A8%B8%EB%A5%BC-%EB%B3%B4%EB%A0%A4%EA%B3%A0-%ED%95%9C%EB%8B%A4" class="hash-link" aria-label="설계 — 코드 너머를 보려고 한다에 대한 직접 링크" title="설계 — 코드 너머를 보려고 한다에 대한 직접 링크" translate="no">​</a></h3>
+<p>동작 여부보다 <strong>놓치기 쉬운 부분</strong>을 함께 확인하려고 해요.</p>
+<ul>
+<li class="">등록만 되어있고 실제로 사용되지 않는 코드가 남아있지 않은지</li>
+<li class="">같은 역할의 파일이 두 곳에 존재하고 있지 않은지</li>
+<li class="">컴포넌트를 떠날 때 리소스가 정리되고 있는지</li>
+</ul>
+<p>잘한 부분은 구체적으로 짚으려고 합니다.</p>
+<blockquote>
+<p>"서비스 레이어 분리로 관심사가 잘 나뉘었고, 파라미터를 객체로 묶은 것도 가독성이 좋아졌습니다. 다만 주석과 실제 함수명이 다른 부분이 있어서, 확인해보시면 좋을 것 같습니다."</p>
+</blockquote>
+<p>수정이 필요한 부분도 있었지만, 먼저 좋아진 점을 이야기해요. 그래야 다음 MR에서도 그 방향을 유지할 수 있다고 생각하거든요.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="방어적-코딩--동작하지만-더-안전할-수-있는-코드">방어적 코딩 — "동작하지만 더 안전할 수 있는 코드"<a href="https://karajan610.github.io/blog/2026/04/03/%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0%EA%B0%80-%EC%97%86%EB%8D%98-%ED%8C%80%EC%97%90%EC%84%9C-9%EA%B0%9C%EC%9B%94#%EB%B0%A9%EC%96%B4%EC%A0%81-%EC%BD%94%EB%94%A9--%EB%8F%99%EC%9E%91%ED%95%98%EC%A7%80%EB%A7%8C-%EB%8D%94-%EC%95%88%EC%A0%84%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8A%94-%EC%BD%94%EB%93%9C" class="hash-link" aria-label="방어적 코딩 — &quot;동작하지만 더 안전할 수 있는 코드&quot;에 대한 직접 링크" title="방어적 코딩 — &quot;동작하지만 더 안전할 수 있는 코드&quot;에 대한 직접 링크" translate="no">​</a></h3>
+<p>동작은 해요. QA에서도 잡히지 않을 수 있습니다.</p>
+<p>하지만 리뷰에서 이런 질문을 던져보는 편이에요.</p>
+<blockquote>
+<p>"이 값이 비어있을 때도 안전한가요?"
+"이 로직을 제거한 건 의도된 건가요?"</p>
+</blockquote>
+<p>프로덕션에서 특정 조건이 겹치면 문제가 될 수 있는 부분을 미리 함께 확인하는 거예요.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="코드-간결화--줄이는-게-늘리는-것보다-낫다">코드 간결화 — 줄이는 게 늘리는 것보다 낫다<a href="https://karajan610.github.io/blog/2026/04/03/%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0%EA%B0%80-%EC%97%86%EB%8D%98-%ED%8C%80%EC%97%90%EC%84%9C-9%EA%B0%9C%EC%9B%94#%EC%BD%94%EB%93%9C-%EA%B0%84%EA%B2%B0%ED%99%94--%EC%A4%84%EC%9D%B4%EB%8A%94-%EA%B2%8C-%EB%8A%98%EB%A6%AC%EB%8A%94-%EA%B2%83%EB%B3%B4%EB%8B%A4-%EB%82%AB%EB%8B%A4" class="hash-link" aria-label="코드 간결화 — 줄이는 게 늘리는 것보다 낫다에 대한 직접 링크" title="코드 간결화 — 줄이는 게 늘리는 것보다 낫다에 대한 직접 링크" translate="no">​</a></h3>
+<p>같은 결과를 얻기 위해 같은 함수를 여러 번 호출하거나, 불필요해진 분기가 남아있는 경우를 짚어요.</p>
+<blockquote>
+<p>"같은 날짜를 구하는데 new Date()를 3번 호출하고 있어요. 한 번만 호출하고 재사용하면 어떨까요?"</p>
+</blockquote>
+<p>동료가 불필요한 코드를 과감하게 제거했을 때는 구체적으로 이야기합니다.</p>
+<blockquote>
+<p>"코드가 줄어드는 게 유지보수 측면에서 유리합니다. 시원하게 날려주셨군요 👍"</p>
+</blockquote>
+<p><strong>"뭘 잘 했는지" 짚어주는 리뷰.</strong> 이게 다음 MR에서도 같은 방향을 유지하게 만든다고 생각해요.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="네이밍--미래를-위한-문서">네이밍 — 미래를 위한 문서<a href="https://karajan610.github.io/blog/2026/04/03/%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0%EA%B0%80-%EC%97%86%EB%8D%98-%ED%8C%80%EC%97%90%EC%84%9C-9%EA%B0%9C%EC%9B%94#%EB%84%A4%EC%9D%B4%EB%B0%8D--%EB%AF%B8%EB%9E%98%EB%A5%BC-%EC%9C%84%ED%95%9C-%EB%AC%B8%EC%84%9C" class="hash-link" aria-label="네이밍 — 미래를 위한 문서에 대한 직접 링크" title="네이밍 — 미래를 위한 문서에 대한 직접 링크" translate="no">​</a></h3>
+<p>사소해 보이지만 가끔 반복적으로 짚게 되는 부분이에요.</p>
+<blockquote>
+<p>"오타입니다. <code>onClickPeiod</code> → <code>onClickPeriod</code>"</p>
+</blockquote>
+<p>오타는 검색에서 안 걸려요. 수 개월 뒤 이 함수를 찾으려는 사람이 고생합니다.</p>
+<p>네이밍 컨벤션도 함께 이야기해요.</p>
+<blockquote>
+<p>"camelCase를 적용해보는 건 어떨까요? JS 생태계에서는 표준으로 사용하고 있습니다."</p>
+</blockquote>
+<p>지적이 아니라 제안. 이유를 함께 전달하면 다음에도 같은 기준을 적용할 수 있다고 생각해요.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="시맨틱-html">시맨틱 HTML<a href="https://karajan610.github.io/blog/2026/04/03/%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0%EA%B0%80-%EC%97%86%EB%8D%98-%ED%8C%80%EC%97%90%EC%84%9C-9%EA%B0%9C%EC%9B%94#%EC%8B%9C%EB%A7%A8%ED%8B%B1-html" class="hash-link" aria-label="시맨틱 HTML에 대한 직접 링크" title="시맨틱 HTML에 대한 직접 링크" translate="no">​</a></h3>
+<div class="language-html codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-html codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic">&lt;!-- 개선 전 --&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">a</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">@click</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag attr-value" style="color:#e3116c">handleAction</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain">버튼처럼 동작하는 링크</span><span class="token tag punctuation" style="color:#393A34">&lt;/</span><span class="token tag" style="color:#00009f">a</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic">&lt;!-- 개선 후 --&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">button</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">type</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag attr-value" style="color:#e3116c">button</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">@click</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag attr-value" style="color:#e3116c">handleAction</span><span class="token tag attr-value punctuation" style="color:#393A34">"</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain">액션 버튼</span><span class="token tag punctuation" style="color:#393A34">&lt;/</span><span class="token tag" style="color:#00009f">button</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><br></span></code></pre></div></div>
+<p>인터랙션이면 <code>button</code>, 페이지 이동이면 <code>a</code> 태그. <code>alt</code> 속성, Layout Shift 방지를 위한 <code>width</code>/<code>height</code> 지정.</p>
+<p>프론트엔드 개발자이기에 함께 나눌 수 있는 영역이라고 생각합니다.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="모든-리뷰를-같은-깊이로-하지-않는다">모든 리뷰를 같은 깊이로 하지 않는다<a href="https://karajan610.github.io/blog/2026/04/03/%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0%EA%B0%80-%EC%97%86%EB%8D%98-%ED%8C%80%EC%97%90%EC%84%9C-9%EA%B0%9C%EC%9B%94#%EB%AA%A8%EB%93%A0-%EB%A6%AC%EB%B7%B0%EB%A5%BC-%EA%B0%99%EC%9D%80-%EA%B9%8A%EC%9D%B4%EB%A1%9C-%ED%95%98%EC%A7%80-%EC%95%8A%EB%8A%94%EB%8B%A4" class="hash-link" aria-label="모든 리뷰를 같은 깊이로 하지 않는다에 대한 직접 링크" title="모든 리뷰를 같은 깊이로 하지 않는다에 대한 직접 링크" translate="no">​</a></h2>
+<p>리뷰 깊이는 의식적으로 조절하고 있어요.</p>
+<table><thead><tr><th>MR 성격</th><th>리뷰 깊이</th><th>이유</th></tr></thead><tbody><tr><td>hotfix</td><td>빠르게 확인</td><td>즉시 머지가 우선</td></tr><tr><td>시즌 한정 코드</td><td>가볍게</td><td>수명이 짧은 코드</td></tr><tr><td>핵심 기능 (결제/인증)</td><td>깊이 있게</td><td>비즈니스 임팩트</td></tr><tr><td>리팩토링</td><td>구조/설계까지</td><td>장기적 영향</td></tr></tbody></table>
+<p>긴급 대응에 설계 원칙을 길게 논하기보다, 상황에 맞는 피드백이 더 도움이 된다고 생각해요.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="온라인과-오프라인">온라인과 오프라인<a href="https://karajan610.github.io/blog/2026/04/03/%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0%EA%B0%80-%EC%97%86%EB%8D%98-%ED%8C%80%EC%97%90%EC%84%9C-9%EA%B0%9C%EC%9B%94#%EC%98%A8%EB%9D%BC%EC%9D%B8%EA%B3%BC-%EC%98%A4%ED%94%84%EB%9D%BC%EC%9D%B8" class="hash-link" aria-label="온라인과 오프라인에 대한 직접 링크" title="온라인과 오프라인에 대한 직접 링크" translate="no">​</a></h2>
+<p>MR 코멘트만이 리뷰의 전부는 아니었어요.</p>
+<p>데일리 스크럼 시간에 자신의 코드를 화면에 띄우고, 변경 사항과 이유를 직접 설명하는 시간을 가졌습니다. 텍스트로 전달하기 어려운 맥락을 공유하고, 바로 질문과 의견을 나눌 수 있었어요.</p>
+<p>MR 코멘트로 비동기 피드백을, 데일리 스크럼으로 동기 피드백을. 두 채널을 병행하면서 리뷰의 폭이 넓어졌습니다.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="달라지고-있는-것들">달라지고 있는 것들<a href="https://karajan610.github.io/blog/2026/04/03/%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0%EA%B0%80-%EC%97%86%EB%8D%98-%ED%8C%80%EC%97%90%EC%84%9C-9%EA%B0%9C%EC%9B%94#%EB%8B%AC%EB%9D%BC%EC%A7%80%EA%B3%A0-%EC%9E%88%EB%8A%94-%EA%B2%83%EB%93%A4" class="hash-link" aria-label="달라지고 있는 것들에 대한 직접 링크" title="달라지고 있는 것들에 대한 직접 링크" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="mr의-형태">MR의 형태<a href="https://karajan610.github.io/blog/2026/04/03/%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0%EA%B0%80-%EC%97%86%EB%8D%98-%ED%8C%80%EC%97%90%EC%84%9C-9%EA%B0%9C%EC%9B%94#mr%EC%9D%98-%ED%98%95%ED%83%9C" class="hash-link" aria-label="MR의 형태에 대한 직접 링크" title="MR의 형태에 대한 직접 링크" translate="no">​</a></h3>
+<table><thead><tr><th></th><th>도입 전</th><th>9개월 후</th></tr></thead><tbody><tr><td>MR 용도</td><td>배포용 (dev→master)</td><td>코드 리뷰용 MR 도입</td></tr><tr><td>제목</td><td>"Dev" 등 단순 제목</td><td>컨벤셔널 커밋 형식</td></tr><tr><td>설명</td><td>최소한</td><td>이슈/변경/결과/테스트 구조</td></tr><tr><td>브랜치</td><td>dev 중심</td><td>feature/fix/release → dev</td></tr><tr><td>리뷰어</td><td>미지정</td><td>지정</td></tr><tr><td>머지 방식</td><td>바로 머지</td><td>리뷰 후 머지</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="동료의-변화">동료의 변화<a href="https://karajan610.github.io/blog/2026/04/03/%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0%EA%B0%80-%EC%97%86%EB%8D%98-%ED%8C%80%EC%97%90%EC%84%9C-9%EA%B0%9C%EC%9B%94#%EB%8F%99%EB%A3%8C%EC%9D%98-%EB%B3%80%ED%99%94" class="hash-link" aria-label="동료의 변화에 대한 직접 링크" title="동료의 변화에 대한 직접 링크" translate="no">​</a></h3>
+<p>같은 동료의 MR을 시간 순으로 보면 변화가 보여요.</p>
+<p>처음에는 동료가 먼저 물어봤어요. 과거에 사용했던 MR(PR) 템플릿이 있는지. 그리고 그 템플릿을 적극적으로 활용하기 시작했습니다.</p>
+<p>이후에는 외부 패키지를 네이티브로 전환하는 작업을 완수했어요. QA 시나리오 문서까지 작성해서 첨부했습니다. 이전에 시도했던 경험이 밑거름이 된 거예요.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="동료의-발표">동료의 발표<a href="https://karajan610.github.io/blog/2026/04/03/%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0%EA%B0%80-%EC%97%86%EB%8D%98-%ED%8C%80%EC%97%90%EC%84%9C-9%EA%B0%9C%EC%9B%94#%EB%8F%99%EB%A3%8C%EC%9D%98-%EB%B0%9C%ED%91%9C" class="hash-link" aria-label="동료의 발표에 대한 직접 링크" title="동료의 발표에 대한 직접 링크" translate="no">​</a></h2>
+<p>동료가 코드 리뷰 경험을 정리해서 개발팀 전체에 발표했어요.</p>
+<p>그 발표에 담긴 것들:</p>
+<ul>
+<li class=""><strong>"지금 우리 팀에서는 왜 하는가"</strong> — 회사 맥락에 맞게 리뷰의 이유를 정리</li>
+<li class=""><strong>리뷰어/작성자 가이드라인</strong> — 각 역할별 기대 행동을 분리</li>
+<li class=""><strong>MR 템플릿 활용</strong> — 기존 템플릿을 기반으로 팀에 맞게 적용</li>
+<li class=""><strong>Defect Density vs LOC 차트</strong> — 리뷰 단위가 작을수록 결함 발견율이 높다는 데이터 인용</li>
+</ul>
+<p>방향을 보여주고, 실천하고, 동료가 자기 방식으로 확장한 거예요.</p>
+<p>리뷰 문화는 한 사람이 만드는 게 아니라고 생각합니다. 누군가가 먼저 시작하고, 그걸 본 사람이 자기 방식으로 발전시킬 때 문화가 되는 거라고 생각해요.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="리뷰-범위를-넓히다">리뷰 범위를 넓히다<a href="https://karajan610.github.io/blog/2026/04/03/%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0%EA%B0%80-%EC%97%86%EB%8D%98-%ED%8C%80%EC%97%90%EC%84%9C-9%EA%B0%9C%EC%9B%94#%EB%A6%AC%EB%B7%B0-%EB%B2%94%EC%9C%84%EB%A5%BC-%EB%84%93%ED%9E%88%EB%8B%A4" class="hash-link" aria-label="리뷰 범위를 넓히다에 대한 직접 링크" title="리뷰 범위를 넓히다에 대한 직접 링크" translate="no">​</a></h2>
+<p>6개월이 지나서야 명시적으로 이야기했어요.</p>
+<blockquote>
+<p>"FE MR이 올라왔을 때 가능하면 코멘트나 질문을 남겨주시면 좋겠습니다. 본인 코드뿐 아니라 동료의 코드를 읽고 피드백하는 것도 중요한 개발자의 역할이라 생각합니다."</p>
+</blockquote>
+<p>먼저 실천하고, 범위를 넓히고, 충분히 쌓인 뒤에 함께 하자고 이야기하는 것. 그 순서가 중요했다고 생각해요.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="리뷰는-일방적이-아니다">리뷰는 일방적이 아니다<a href="https://karajan610.github.io/blog/2026/04/03/%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0%EA%B0%80-%EC%97%86%EB%8D%98-%ED%8C%80%EC%97%90%EC%84%9C-9%EA%B0%9C%EC%9B%94#%EB%A6%AC%EB%B7%B0%EB%8A%94-%EC%9D%BC%EB%B0%A9%EC%A0%81%EC%9D%B4-%EC%95%84%EB%8B%88%EB%8B%A4" class="hash-link" aria-label="리뷰는 일방적이 아니다에 대한 직접 링크" title="리뷰는 일방적이 아니다에 대한 직접 링크" translate="no">​</a></h2>
+<p>내가 제안한 네이밍을 동료가 더 적절한 이유를 들어 다른 방향을 제안한 적이 있어요.</p>
+<p><strong>리뷰어도 배웁니다.</strong> 그리고 그런 교환이 일어나는 게 건강한 리뷰 문화의 신호라고 생각해요.</p>
+<p>리뷰에서 의견이 다를 때, 중요한 건 누가 맞는가가 아니에요. <strong>왜 그렇게 생각하는가</strong>를 함께 나누는 거라고 생각합니다.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="아직-더-나아갈-것들">아직 더 나아갈 것들<a href="https://karajan610.github.io/blog/2026/04/03/%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0%EA%B0%80-%EC%97%86%EB%8D%98-%ED%8C%80%EC%97%90%EC%84%9C-9%EA%B0%9C%EC%9B%94#%EC%95%84%EC%A7%81-%EB%8D%94-%EB%82%98%EC%95%84%EA%B0%88-%EA%B2%83%EB%93%A4" class="hash-link" aria-label="아직 더 나아갈 것들에 대한 직접 링크" title="아직 더 나아갈 것들에 대한 직접 링크" translate="no">​</a></h2>
+<p>솔직히, 아직 갈 길이 멀어요.</p>
+<ul>
+<li class=""><strong>내 MR에 대한 리뷰</strong>: 내가 작성한 204건의 MR에 동료의 코드 리뷰 코멘트는 아직 거의 없습니다. 리뷰 문화를 만들어가고 있다고 했지만, 아직 일방향이에요. 내가 동료의 코드를 읽는 것만큼, 동료가 내 코드를 읽는 구조가 되어야 합니다. 이게 다음 과제라고 생각하고 있어요.</li>
+<li class=""><strong>리뷰 비용에 대한 인식</strong>: 코멘트를 작성하고 코드를 읽는 시간이 아직 팀 전체에서 가치로 인정되는 분위기는 아니에요.</li>
+<li class=""><strong>리뷰어 확대</strong>: 리뷰가 한 사람에게 집중되면 병목이 됩니다. 더 많은 팀원이 리뷰에 참여하는 구조를 만들어가고 싶어요.</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="돌아보며">돌아보며<a href="https://karajan610.github.io/blog/2026/04/03/%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0%EA%B0%80-%EC%97%86%EB%8D%98-%ED%8C%80%EC%97%90%EC%84%9C-9%EA%B0%9C%EC%9B%94#%EB%8F%8C%EC%95%84%EB%B3%B4%EB%A9%B0" class="hash-link" aria-label="돌아보며에 대한 직접 링크" title="돌아보며에 대한 직접 링크" translate="no">​</a></h2>
+<p>코드 리뷰용 MR이 없던 팀에서, 9개월 동안 204건의 MR을 올리고 25건 이상의 동료 코드를 함께 읽었어요.</p>
+<p>3개월 뒤, 동료의 MR이 달라지기 시작했습니다. 6개월 뒤, 동료가 직접 리뷰 경험을 정리해 발표했어요.</p>
+<p>아직 양방향은 아닙니다. 아직 더 넓혀야 해요. 아직 더 나아가야 합니다.</p>
+<p>하지만 리뷰 한 건이 쌓이면 문화가 된다는 걸, 조금씩 확인하고 있어요.</p>]]></content:encoded>
+            <category>코드 리뷰</category>
+            <category>팀 문화</category>
+            <category>협업</category>
+            <category>성장</category>
+        </item>
         <item>
             <title><![CDATA[당신은 Tailwind CSS를 왜 사용하나요?]]></title>
             <link>https://karajan610.github.io/blog/2026/01/05/당신은-tailwind-css를-왜-사용하나요</link>
@@ -63,7 +207,7 @@
 <p>새로운 팀원이 왔을 때.</p>
 <p>BEM이면 "우리 팀 규칙은 이래요" 설명해야 한다.</p>
 <p>Tailwind는 공식 문서 링크 주면 끝.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-inline-style과는-다르다">3. inline style과는 다르다<a href="https://karajan610.github.io/blog/2026/01/05/%EB%8B%B9%EC%8B%A0%EC%9D%80-tailwind-css%EB%A5%BC-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%82%98%EC%9A%94#3-inline-style%EA%B3%BC%EB%8A%94-%EB%8B%A4%EB%A5%B4%EB%8B%A4" class="hash-link" aria-label="3. inline style과는 다르다에 대한 직접 링크" title="3. inline style��과는 다르다에 대한 직접 링크" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-inline-style과는-다르다">3. inline style과는 다르다<a href="https://karajan610.github.io/blog/2026/01/05/%EB%8B%B9%EC%8B%A0%EC%9D%80-tailwind-css%EB%A5%BC-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%82%98%EC%9A%94#3-inline-style%EA%B3%BC%EB%8A%94-%EB%8B%A4%EB%A5%B4%EB%8B%A4" class="hash-link" aria-label="3. inline style과는 다르다에 대한 직접 링크" title="3. inline style과는 다르다에 대한 직접 링크" translate="no">​</a></h3>
 <p>"inline style이랑 뭐가 달라?"</p>
 <p>Tailwind 창시자인 Adam Wathan은 이렇게 말했어요.</p>
 <blockquote>
@@ -150,7 +294,7 @@
 <hr>
 <p><strong>당신은 Tailwind CSS를 왜 사용하나요?</strong></p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="참고">참고<a href="https://karajan610.github.io/blog/2026/01/05/%EB%8B%B9%EC%8B%A0%EC%9D%80-tailwind-css%EB%A5%BC-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%82%98%EC%9A%94#%EC%B0%B8%EA%B3%A0" class="hash-link" aria-label="참고에 대한 직접 ��링크" title="참고에 대한 직접 링크" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="참고">참고<a href="https://karajan610.github.io/blog/2026/01/05/%EB%8B%B9%EC%8B%A0%EC%9D%80-tailwind-css%EB%A5%BC-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%82%98%EC%9A%94#%EC%B0%B8%EA%B3%A0" class="hash-link" aria-label="참고에 대한 직접 링크" title="참고에 대한 직접 ��링크" translate="no">​</a></h2>
 <ul>
 <li class=""><a href="https://adamwathan.me/css-utility-classes-and-separation-of-concerns/" target="_blank" rel="noopener noreferrer" class="">CSS Utility Classes and "Separation of Concerns" - Adam Wathan</a></li>
 <li class=""><a href="https://ykss.netlify.app/translation/goodbye_sass_welcome_back_native_css/" target="_blank" rel="noopener noreferrer" class="">Goodbye Sass, Welcome Back Native CSS</a></li>
